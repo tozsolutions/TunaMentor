@@ -1,3 +1,4 @@
+
 modules = ["python-3.11"]
 
 [nix]
@@ -6,31 +7,32 @@ packages = ["glibcLocales"]
 
 [deployment]
 deploymentTarget = "autoscale"
-run = ["github", "run", "app.py", "https://github.com/tozsolutions/.replit"]    
+run = ["streamlit", "run", "app.py", "--server.port", "5000", "--server.address", "0.0.0.0"]
 
 [workflows]
-runButton = "Project"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Alex LGS Koçu"
+runButton = "Alex LGS Koçu"
 
 [[workflows.workflow]]
 name = "Alex LGS Koçu"
+mode = "sequential"
 author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "streamlit run app.py --server.port 5000"
+args = "streamlit run app.py --server.port 5000 --server.address 0.0.0.0"
 waitForPort = 5000
 
 [workflows.workflow.metadata]
 outputType = "webview"
+
+[[workflows.workflow]]
+name = "Python Runner"
+mode = "sequential"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python app.py"
 
 [[ports]]
 localPort = 5000
@@ -38,3 +40,7 @@ externalPort = 80
 
 [agent]
 integrations = ["python_openai==1.0.0"]
+
+[env]
+STREAMLIT_SERVER_PORT = "5000"
+STREAMLIT_SERVER_ADDRESS = "0.0.0.0"
