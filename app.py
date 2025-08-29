@@ -38,14 +38,16 @@ if 'db' not in st.session_state:
 # Custom CSS for Fenerbahçe theme with background images
 st.markdown("""
 <style>
-    /* Ana sayfa arka planı */
+    /* Ana sayfa arka planı - Fenerbahçe temalı */
     .main > div {
         background: 
-            linear-gradient(135deg, rgba(31,42,68,0.85), rgba(255,220,0,0.15)),
-            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="stars" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%23FFDC00" opacity="0.3"/><circle cx="80" cy="60" r="1" fill="%23FFFFFF" opacity="0.4"/><circle cx="50" cy="80" r="1.5" fill="%23FFDC00" opacity="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23stars)"/></svg>');
-        background-size: cover, 200px 200px;
-        background-position: center, 0 0;
-        background-attachment: fixed, fixed;
+            linear-gradient(135deg, rgba(31,42,68,0.95), rgba(255,220,0,0.25)),
+            radial-gradient(circle at 20% 30%, rgba(255,220,0,0.3) 0%, transparent 60%),
+            radial-gradient(circle at 80% 70%, rgba(31,42,68,0.4) 0%, transparent 60%),
+            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="fbpattern" x="0" y="0" width="150" height="150" patternUnits="userSpaceOnUse"><circle cx="75" cy="75" r="30" fill="none" stroke="%23FFDC00" stroke-width="3" opacity="0.2"/><polygon points="75,45 85,70 75,95 65,70" fill="%23FFDC00" opacity="0.15"/></pattern></defs><rect width="100%" height="100%" fill="url(%23fbpattern)"/></svg>');
+        background-size: cover, auto, auto, 300px 300px;
+        background-position: center, 0 0, 100% 100%, 0 0;
+        background-attachment: fixed;
         min-height: 100vh;
         position: relative;
     }
@@ -107,25 +109,104 @@ st.markdown("""
         border: 2px solid rgba(255,220,0,0.4);
     }
     .alex-avatar {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
-        border: 4px solid #FFDC00;
-        background: linear-gradient(135deg, #1F2A44, #FFDC00);
+        border: 5px solid #FFDC00;
+        background: 
+            radial-gradient(circle at 30% 30%, #87CEEB 0%, #4169E1 100%),
+            linear-gradient(135deg, #1F2A44, #FFDC00);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 15px auto;
+        margin: 20px auto;
         box-shadow: 
-            0 0 20px rgba(255,220,0,0.6),
-            inset 0 0 20px rgba(255,220,0,0.2);
-        animation: pulse 2s infinite;
+            0 0 30px rgba(255,220,0,0.8),
+            inset 0 0 30px rgba(255,255,255,0.2),
+            0 8px 16px rgba(0,0,0,0.3);
+        animation: alex3d 3s infinite ease-in-out;
         position: relative;
-        overflow: hidden;
-        font-size: 48px;
-        color: white;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        overflow: visible;
+        font-size: 0;
         z-index: 10;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    
+    .alex-avatar:hover {
+        transform: scale(1.1) rotateY(10deg);
+    }
+    
+    .alex-avatar::before {
+        content: '👨‍🏫';
+        position: absolute;
+        font-size: 80px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 12;
+        text-shadow: 
+            3px 3px 6px rgba(0,0,0,0.5),
+            0 0 15px rgba(255,220,0,0.8);
+        animation: alexBlink 4s infinite;
+    }
+    
+    .alex-avatar::after {
+        content: 'ALEX';
+        position: absolute;
+        bottom: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        font-weight: bold;
+        color: #FFDC00;
+        background: rgba(31,42,68,0.9);
+        padding: 5px 15px;
+        border-radius: 20px;
+        border: 2px solid #FFDC00;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        z-index: 11;
+    }
+    
+    @keyframes alex3d {
+        0%, 100% { 
+            transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+            box-shadow: 
+                0 0 30px rgba(255,220,0,0.8),
+                inset 0 0 30px rgba(255,255,255,0.2),
+                0 8px 16px rgba(0,0,0,0.3);
+        }
+        25% { 
+            transform: translateY(-10px) rotateX(5deg) rotateY(5deg);
+            box-shadow: 
+                0 0 40px rgba(255,220,0,1),
+                inset 0 0 40px rgba(255,255,255,0.3),
+                0 12px 20px rgba(0,0,0,0.4);
+        }
+        50% { 
+            transform: translateY(-5px) rotateX(-2deg) rotateY(-2deg);
+            box-shadow: 
+                0 0 35px rgba(255,220,0,0.9),
+                inset 0 0 35px rgba(255,255,255,0.25),
+                0 10px 18px rgba(0,0,0,0.35);
+        }
+        75% { 
+            transform: translateY(-8px) rotateX(3deg) rotateY(-3deg);
+            box-shadow: 
+                0 0 38px rgba(255,220,0,0.95),
+                inset 0 0 38px rgba(255,255,255,0.28),
+                0 11px 19px rgba(0,0,0,0.37);
+        }
+    }
+    
+    @keyframes alexBlink {
+        0%, 90%, 100% { 
+            content: '👨‍🏫';
+        }
+        93%, 97% { 
+            content: '😊';
+        }
     }
     
     .alex-avatar::before {
@@ -288,16 +369,32 @@ def show_home_page():
     """Home page with daily overview"""
     st.markdown('<div class="main-header"><h2>🏠 Hoş Geldin Tuna!</h2></div>', unsafe_allow_html=True)
     
-    # Alex greeting
+    # Alex greeting with auto-speech
     col1, col2 = st.columns([1, 2])
     with col1:
-        st.markdown('<div class="alex-avatar">ALEX</div>', unsafe_allow_html=True)
+        st.markdown('<div class="alex-avatar"></div>', unsafe_allow_html=True)
     with col2:
         greeting = st.session_state.alex.get_daily_greeting()
-        st.markdown(f"**Alex diyor ki:** {greeting}")
+        st.markdown(f'<div class="alex-speech-bubble">{greeting}</div>', unsafe_allow_html=True)
         
-        if st.button("🔊 Sesli Dinle"):
-            st.session_state.voice.speak(greeting)
+        # Auto-speak on page load
+        if 'home_greeted' not in st.session_state:
+            st.session_state.home_greeted = True
+            # Trigger auto-speech
+            auto_speech_js = f"""
+            <script>
+            setTimeout(function() {{
+                if ('speechSynthesis' in window) {{
+                    var utterance = new SpeechSynthesisUtterance('{greeting}');
+                    utterance.lang = 'tr-TR';
+                    utterance.rate = 0.9;
+                    utterance.pitch = 1.1;
+                    window.speechSynthesis.speak(utterance);
+                }}
+            }}, 1000);
+            </script>
+            """
+            st.components.v1.html(auto_speech_js, height=0)
     
     st.markdown('<div class="fenerbahce-colors"></div>', unsafe_allow_html=True)
     
@@ -402,29 +499,104 @@ def show_study_page():
     with col2:
         st.markdown("### 🎮 Çalışma Araçları")
         
-        if st.button("❓ Soru Çöz"):
+        # Persistent question state
+        if f"current_question_{subject}_{topic}" not in st.session_state:
+            st.session_state[f"current_question_{subject}_{topic}"] = None
+            st.session_state[f"answered_{subject}_{topic}"] = False
+            st.session_state[f"score_{subject}_{topic}"] = 0
+            st.session_state[f"total_questions_{subject}_{topic}"] = 0
+        
+        current_q_key = f"current_question_{subject}_{topic}"
+        answered_key = f"answered_{subject}_{topic}"
+        score_key = f"score_{subject}_{topic}"
+        total_key = f"total_questions_{subject}_{topic}"
+        
+        # Show current stats
+        if st.session_state[total_key] > 0:
+            st.markdown(f"**📊 Bu Konudaki Performansın:** {st.session_state[score_key]}/{st.session_state[total_key]} doğru")
+        
+        if st.button("❓ Yeni Soru Getir") or st.session_state[current_q_key] is None:
             question = st.session_state.curriculum.get_question(subject, topic)
+            st.session_state[current_q_key] = question
+            st.session_state[answered_key] = False
+            
+            # Alex auto-speaks the question
             if question:
-                st.markdown("#### 📝 Soru:")
-                st.markdown(question['text'])
+                question_speech = f"Yeni soru geliyor! {question['text']}"
+                auto_speech_js = f"""
+                <script>
+                setTimeout(function() {{
+                    if ('speechSynthesis' in window) {{
+                        var utterance = new SpeechSynthesisUtterance('{question_speech}');
+                        utterance.lang = 'tr-TR';
+                        utterance.rate = 0.8;
+                        window.speechSynthesis.speak(utterance);
+                    }}
+                }}, 500);
+                </script>
+                """
+                st.components.v1.html(auto_speech_js, height=0)
+        
+        current_question = st.session_state[current_q_key]
+        if current_question and not st.session_state[answered_key]:
+            st.markdown("#### 📝 Soru:")
+            st.markdown(current_question['text'])
+            
+            # Multiple choice options
+            user_answer = st.radio("Cevabını seç:", current_question['options'], key=f"answer_{current_q_key}")
+            
+            if st.button("✅ Cevapla", key=f"submit_{current_q_key}"):
+                st.session_state[answered_key] = True
+                st.session_state[total_key] += 1
                 
-                # Multiple choice options
-                user_answer = st.radio("Cevabını seç:", question['options'])
+                is_correct = st.session_state.curriculum.check_answer(current_question['id'], user_answer)
                 
-                if st.button("✅ Cevapla"):
-                    is_correct = st.session_state.curriculum.check_answer(question['id'], user_answer)
+                if is_correct:
+                    st.session_state[score_key] += 1
+                    st.success("🎉 Doğru! Harika iş!")
+                    points_earned = st.session_state.gamification.add_points("tuna", 10)
+                    st.info(f"🏆 +10 puan kazandın! Toplam: {points_earned}")
                     
-                    if is_correct:
-                        st.success("🎉 Doğru! Harika iş!")
-                        points_earned = st.session_state.gamification.add_points("tuna", 10)
-                        st.info(f"🏆 +10 puan kazandın! Toplam: {points_earned}")
-                    else:
-                        st.error(f"❌ Yanlış. Doğru cevap: {question['correct_answer']}")
-                        st.session_state.db.log_mistake("tuna", subject, topic, question['id'])
-                        
-                        # Alex encouragement
-                        encouragement = st.session_state.alex.get_encouragement()
-                        st.info(f"🤖 Alex: {encouragement}")
+                    # Alex congratulation speech
+                    congrats = "Tebrikler! Doğru cevap! Böyle devam et şampiyon!"
+                    success_speech_js = f"""
+                    <script>
+                    setTimeout(function() {{
+                        if ('speechSynthesis' in window) {{
+                            var utterance = new SpeechSynthesisUtterance('{congrats}');
+                            utterance.lang = 'tr-TR';
+                            utterance.rate = 0.9;
+                            utterance.pitch = 1.2;
+                            window.speechSynthesis.speak(utterance);
+                        }}
+                    }}, 500);
+                    </script>
+                    """
+                    st.components.v1.html(success_speech_js, height=0)
+                else:
+                    st.error(f"❌ Yanlış. Doğru cevap: {current_question['correct_answer']}")
+                    st.session_state.db.log_mistake("tuna", subject, topic, current_question['id'])
+                    
+                    # Alex encouragement with auto-speech
+                    encouragement = st.session_state.alex.get_encouragement()
+                    st.info(f"🤖 Alex: {encouragement}")
+                    
+                    encouragement_speech_js = f"""
+                    <script>
+                    setTimeout(function() {{
+                        if ('speechSynthesis' in window) {{
+                            var utterance = new SpeechSynthesisUtterance('{encouragement}');
+                            utterance.lang = 'tr-TR';
+                            utterance.rate = 0.8;
+                            window.speechSynthesis.speak(utterance);
+                        }}
+                    }}, 500);
+                    </script>
+                    """
+                    st.components.v1.html(encouragement_speech_js, height=0)
+        
+        elif st.session_state[answered_key]:
+            st.info("✅ Bu soruyu cevapladın! Yeni soru için 'Yeni Soru Getir' butonuna tıkla.")
         
         if st.button("🔄 Tekrar Et"):
             st.info("🎯 Bu konuyu aralıklı tekrar listesine eklendi!")

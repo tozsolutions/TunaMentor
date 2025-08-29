@@ -10,7 +10,7 @@ deploymentTarget = "autoscale"
 run = ["streamlit", "run", "app.py", "--server.port", "5000", "--server.address", "0.0.0.0"]
 
 [workflows]
-runButton = "Alex LGS Koçu"
+runButton = "Alex LGS Koçu Düzeltilmiş"
 
 [[workflows.workflow]]
 name = "Alex LGS Koçu"
@@ -50,6 +50,15 @@ args = "python build_apk.py"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "echo \"APK hazırlık tamamlandı! Android Studio ile build edebilirsiniz.\""
+
+[[workflows.workflow]]
+name = "Alex LGS Koçu Düzeltilmiş"
+author = 47009862
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run app.py --server.port 8080 --server.address 0.0.0.0"
 
 [[ports]]
 localPort = 5000

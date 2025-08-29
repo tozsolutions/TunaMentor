@@ -248,6 +248,18 @@ class AlexAI:
         except Exception as e:
             return "Bu hafta matematik ve Türkçe'ye odaklan. Fenerbahçe maçları gibi düzenli antrenman yap! ⚽"
 
+    def get_advanced_learning_tip(self):
+        """Generate advanced learning tips using cutting-edge techniques"""
+        tips = [
+            "🧠 Bugün **Aktif Geri Getirme** tekniği kullanacağız! Okuduğun konuyu kapatıp, ne öğrendiğini kendi kelimerinle anlatmaya çalış. Bu, öğrenme hızını %90 artırır!",
+            "🏰 **Zihin Sarayı** tekniğini deneyelim! Evindeki odaları matematik kuralları için kullan. Salon = ana kurallar, mutfak = örnekler, yatak odası = formüller!",
+            "🎨 **Çift Kodlama** gücünü kullanalım! Matematik problemlerini hem sayılarla hem de görsellerle çöz. Beynin iki farklı yolla bilgiyi işleyecek!",
+            "🔄 **Aralıklı Tekrar** sistemi aktif! Bugün öğrendiklerini 1-3-7-14 gün sonra tekrar et. Bu, bilgiyi %95 oranında kalıcı hale getirir!",
+            "🗺️ **Zihin Haritası** oluştural! Ana konuyu merkeze yaz, dalları renklerle ayır: Kırmızı = Çok Önemli, Mavi = Formüller, Yeşil = Örnekler!",
+            "⚡ Biliyorsun ki **Pomodoro + Aktif Recall** kombinasyonu süper güçlü! 25dk çalış, 5dk ara ver, ardından öğrendiklerini test et!"
+        ]
+        return random.choice(tips)
+
     def get_parent_report(self, student_name, weekly_data):
         """Generate AI evaluation for parents"""
         try:
