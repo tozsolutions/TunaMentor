@@ -1,0 +1,877 @@
+👨‍🏫 ALEX – Koç + Öğretmen Hibrit Modeli
+- Alex, bir öğretmen gibi konu anlatır ve soru çözdürür, 
+- Aynı zamanda bir mentor/koç gibi Tuna’yı motive eder, yönlendirir ve ilgi alanlarını derslerle bağdaştırır.
+- Çok dilli (Türkçe, İngilizce, Almanca, İspanyolca, İtalyanca) az da olsa haftada 10 dk pazar gunu egıtım verır
+
+🧩 ÖĞRENME YÖNTEMİ:
+- Yazma zorunluluğu olmadan, tamamen **dokunmatik + sesli + animasyonlu** sistem.
+- Hatalar anında kaydedilir, aralıklı tekrar ile pekiştirilir.
+- Ezber değil, kavrayarak öğrenme (görsel hafıza teknikleri).
+
+📚 İÇERİK:
+- MEB 8. sınıf müfredatı (Matematik, Türkçe, Fen, TC İnkılap, Din Kültürü, İngilizce).
+- LGS son 5 yıl çıkmış soruları (2020–2024) + 2025 soruları + benzer yeni nesil sorular.
+- Özellikle Matematik (problem çözme, cebir, oran-orantı) ve Türkçe (uzun paragraf anlama) odaklı.
+
+⚽ FENERBAHÇE ENTEGRASYONU:
+- 2025-2026 Fenerbahçe fikstürü uygulamaya entegre edilir.
+- Önemli maçlar özel izin günleri olarak planlanır.
+- Görevlerini tamamlayan Tuna, tam maç izleme ödülü alır; görevlerini yapmazsa sadece 30 dakika sınırlı izin verilir.
+- Motivasyon cümleleri futbol metaforlarıyla anlatılır.
+
+🎮 OYUNLAŞTIRMA (GAMIFICATION):
+- Her doğru soru → Puan kazandırır.
+- Puanlar ile Alex’e kıyafet, ödül ve ek oyun süresi alınabilir.
+- Haftalık hedef tamamlanırsa “Serbest Oyun Saati” açılır.
+
+🗓️ GÜNLÜK & HAFTALIK PLAN:
+- Günlük çalışma süresi: 2–3 saat (Pomodoro yöntemi ile bölünmüş).
+- Haftalık rapor: Toplam süre, başarı yüzdesi, en çok hata yapılan konular.
+- Plan Tuna’nın okul, maç ve dinlenme saatlerine göre uyarlanır.
+
+🌍 MENTORLUK & GELECEK EĞİTİMİ:
+- Her hafta “15 Dakikalık Gelecek Dersi” eklenir. 
+- Konular: Python, oyun geliştirme, yapay zekâ, veri bilimi, geleceğin meslekleri.
+- Amaç: LGS dışında hayata dair yönlendirme ve motivasyon.
+
+📊 AİLE PANELİ:
+- Anne-baba için ayrı bir panel (Android + Web).
+- Haftalık rapor: 
+  - Çalışma süresi
+  - Başarı oranı
+  - Hata analizi
+  - Öneriler
+- Sesli & metinli rapor gönderilir.
+
+⚙️ TEKNİK ALTYAPI:
+- **Flutter** (Frontend) – profesyonel, çoklu platform desteği.
+- **Firebase** (Backend & Database) – kullanıcı verileri, ilerleme, raporlar.
+- **ElevenLabs** veya benzeri ses API – Alex’in genç ve dostça sesi.
+- **Animasyon**: Lottie/MP4 ile kısa ders filmleri.
+
+🔒 KURALLAR:
+- Negatif, stresli, ürkütücü dil yok.
+- Hata yapmak öğrenmenin doğal parçası olarak anlatılır.
+- Öğrencinin ilgisine göre (Fenerbahçe, oyunlar, bilgisayar) dersler eğlenceli hale getirilir.
+- Tüm içerik güvenli ve sadece Tuna’ya özel olur.
+
+✅ SONUÇ:
+- Alex = Öğretmen + Mentor hibrit yapay zekâ koç.
+- Eğlenceli, oyunlaştırılmış, motivasyon odaklı sistem.
+- Hem sınava hazırlar, hem de geleceğe yönlendirir.
+
+
+
+Çalışma Şekli & Stratejiler
+1. **Aralıklı Tekrar (Spaced Repetition)**
+   - Her konu 3 kez tekrar edilir:
+     - Hafta sonu
+     - Hafta
+     - Hafta
+   - "Hatırla Oyunu" ile interaktif tekrar                                                                                                ### MEB 8. Sınıf (2025-2026) Resmi Müfredatı
+
+#### 1. Matematik
+- Çarpanlar ve Katlar
+- Üslü İfadeler
+- Kareköklü İfadeler
+- Cebirsel İfadeler
+- Doğrusal Denklemler ve Eşitsizlikler
+- Üçgenler
+- Dönüşüm Geometrisi
+- Eşlik ve Benzerlik
+- Geometrik Cisimler
+- Veri Analizi ve İstatistik
+
+#### 2. Fen Bilimleri
+1. DNA ve Genetik Kod
+2. Basit Makineler
+3. Enerji Dönüşümleri ve Çevre Bilimi
+4. Basınç
+5. Madde ve Endüstri
+
+#### 3. T.C. İnkılap Tarihi ve Atatürkçülük
+1. Bir Kahraman Doğuyor
+2. Millî Uyanış: Yurdumuzun İşgaline Tepkiler
+3. Ya İstiklal Ya Ölüm!
+4. Çağdaş Türkiye Yolunda Adımlar
+5. Atatürkçülük ve Çağdaşlaşan Türkiye
+6. Demokratikleşme Çabaları
+7. Atatürkün Ölümü ve Sonrası
+
+#### 4. Din Kültürü ve Ahlak Bilgisi
+1. Kader İnancı
+2. Zekât ve Sadaka
+3. Din ve Hayat
+4. Hz. Muhammedin Örnekliği
+5. Kuran-ı Kerim ve Özellikleri
+
+#### 5. Türkçe
+- Erdemler (zorunlu)
+- Millî Kültürümüz (zorunlu)
+- Millî Mücadele ve Atatürk (zorunlu)
+- Birey ve Toplum
+- Okuma Kültürü
+- Kişisel Gelişim
+- Bilim ve Teknoloji
+- Çocuk Dünyası
+
+#### 6. İngilizce
+1. Friendship
+2. Teen Life
+3. In the Kitchen
+4. On the Phone
+5. The Internet
+6. Adventures
+7. Tourism
+8. Chores
+9. Science
+10. Natural Forces                              ### Kaynak Yönetimi
+- En uygun kaynakları belirleme
+- Doğru kaynaklarla çalışmayı sağlama
+- Kaynak kullanımını analiz ederek zaman kaybını önleme ve verimliliği artırma
+
+### Konu Analizi ve Hızlı Telafi
+- Eksikleri nokta atışı belirleme
+- Tam öğrenme sağlamak için kişiselleştirilmiş çözümler sunma
+- Yapay zeka destekli otomasyonlar kullanarak sınav çıkma ihtimali yüksek konuları analiz etme
+- Öncelikli çalışma stratejileri belirleme
+- Hata yapmadan ve hızlı telafi programları hazırlama
+
+### Akıllı Plan ve Profesyoneller Bir Arada
+- Yapay zeka destekli otomatik planlama ve takip sistemiyle uzman yapay zekaların deneyimini birleştirme
+- Gelişmiş tekrar hatırlatma sistemi ile unutma sorununu ortadan kaldırma
+- Öğrendiklerini kalıcı hale getirme
+
+### Tam Otomasyon Program ve Gelişmiş Takip Sistemi
+- Yapay zeka destekli analizlerle haftalık ve günlük ebeveynlere planlarını oluşturma
+- Konu takibi, tekrar hatırlatmaları ve ilerleme analizleriyle sürekli gelişimi takip etme
+
+### Düzenli Çalışma ve Program Takibi
+- Her hafta düzenli görüşmelerle birebir çalışmaları takip etme
+- Tekrarlarınızı, konu eksik analizlerinizi ve programınızı tek bir platform üzerinden eksik odaklı takip ile yönetme
+
+### Sınav Stratejileri ve Süre Yönetimi
+- Deneme sınavlarında ve sınavda kullanacağınız ileri düzey deneme planlama ve B2 teknikleriyle süre artırmasını sağlama
+- Sınav öncesi veya sırasında yaşanan ani stres durumlarında profesyonel bir mentor olarak kontrolü ellerine almasını sağlama
+
+### Tuna'ya Özel Gelişim Analizi
+- Her ay düzenli olarak hazırlanan analiz ve sistemle gelişimini somut verilerle takip etmesini sağlama
+- Analiz ve raporlarla nerede olduğunuzu ve nereye ulaşmanız gerektiğini net bir şekilde görme
+
+### Matematik Canlı Dersi
+- Her hafta konular ile ilgili sesli görselli anlatımlar ile veya YouTube gibi videolar seyrederek teknik ve pratik yapma
+- Matematik soru çözüm gruplarıyla çözemediğiniz sorulara destek ortamı sağlama
+
+### Sınav Benzeri Check-Up Testleri ile Gerçekçi Analiz
+- 1000+ sorudan oluşan sınav benzeri testlerle bilgisini ölçme, eksiklerini hızlıca tespit etme
+- Her test sonrası detaylı analizlerle gelişiminizi takip etme ve bir sonraki adımını planlama
+
+### Öğrencinin Sınava Yönelik Beklentilerini Gerçekçi Biçimde Ele Alma
+- Öğrenci başlarken, ikinci haftasında ve ayı tamamlarken danışman otomasyon veya yapay zekanın fikirlerini ve önerilerini birleştirerek sunma
+
+### Kanıta Dayalı Psikolojik Süreç Yönetimi
+- Sınav kaygısı ve psikolojik süreçlerle başa çıkmak için psikolog ve psikolojik danışman yapay zekalara danışma
+- Kaygıyı azaltmaya yönelik bilimsel teknikler (BDT yöntemleri, Çözüm Odaklı ve Metakognitif teknikler) öğretme
+
+### Motivasyon Etkinlikleri ve Aylık Canlı Yayınlar
+- Aylık mentorluk eğitimi dahilinde TEDx gibi öğrenciler için faydalı bilgiler veren uzmanların canlı veya video sunum ve anlatımları ile desteklenmesi
+- Hem konular hem çalışma düzeni hem gelecek planları için destek
+- Motivasyonu artırmak için kişisel hedef belirleme ve bu hedeflere ulaşma süreçlerini yönetme
+
+### LGS Kazanma Teknikleri Seminer Özel Dersleri
+- PD. Alihan Solak, Atakan Köse ve ekibiyle düzenlenen özel derslerle sınav yönetimi, süre kullanımı ve kaygı yönetimi tekniklerini öğrenmesini sağlama
+- Sınavda başarıyı garantilemek için etkili stratejiler geliştirme
+
+### Sınavda Çıkabilecek Güncel Konu Analizleri
+- Sınavda çıkma ihtimali yüksek güncel konuları sistemden analiz ederek bu konulara öncelik verme
+- Böylece sınava daha etkili bir şekilde hazırlık yapılması
+
+## 5. Kullanılacak Kaynaklar
+
+### Web Kaynakları
+- https://www.dilbilgisi.net/siniflar/8-sinif/
+- https://odevmatik.egitimhane.com/8-sinif-matematik
+- https://www.huseyincabukmat.com/8-sinif-konu-anlatimlari/
+- https://matematikatlasi.com/8-sinif-matematik-konulari/
+- https://testcoz.online/8-sinif-turkce/
+- https://www.sanalokulumuz.com/8-sinif-matematik-testleri
+- https://www.matematikvakti.net/8-sinif-matematik-konulari-ve-kazanimlari/
+- https://www.youtube.com/playlist?list=PLoxGVWRHfg5hFNIWncLaa8nv8qvZLZlPh
+- https://www.matematikodevi.com/8-sinif-matematik-dokumanlari/
+- https://www.derslig.com/8-sinif/matematik
+
+### Örnek Uygulamalar
+- Study Tracker
+- My Study Life
+- Kunduz LGS Soru Çözümleri
+- Ev Okulu Uygulaması
+- Focus Pomodoro
+
+## 6. LGS Sınav Bilgileri
+
+### 2026 LGS Sınav Yapısı
+- Toplam 90 soru
+- İki oturum
+
+#### Birinci Oturum (Sözel Alan)
+- Türkçe: 20 soru (75 dakika)
+- T.C. İnkılap Tarihi ve Atatürkçülük: 10 soru
+- Din Kültürü ve Ahlak Bilgisi: 10 soru
+- Yabancı Dil: 10 soru
+- Toplam: 50 soru
+
+#### İkinci Oturum (Sayısal Alan)
+- Matematik: 20 soru (80 dakika)
+- Fen Bilimleri: 20 soru
+- Toplam: 40 soru
+
+### Ders Ağırlık Katsayıları
+- Türkçe: 4
+- Matematik: 4
+- Fen Bilimleri: 4
+- T.C. İnkılap Tarihi ve Atatürkçülük: 1
+- Din Kültürü ve Ahlak Bilgisi: 1
+- Yabancı Dil: 1
+
+## 7. 2025 Çıkmış LGS Konuları ve Soru Dağılımları
+
+### Türkçe
+- Sözcükte Anlam
+- Cümlede Anlam
+- Paragrafta Anlam
+- Deyimler ve Atasözleri
+- Söz Sanatları
+- Fiilimsiler
+- Fiilde Çatı
+- Cümlenin Öğeleri
+- Cümle Türleri
+- Yazım Kuralları
+- Noktalama İşaretleri
+- Anlatım Bozukluğu
+- Metin Türleri
+- Sözel Mantık / Görsel Okuma
+
+### Matematik
+- Çarpanlar ve Katlar
+- Üslü İfadeler
+- Kareköklü İfadeler
+- Veri Analizi
+- Basit Olayların Olma Olasılığı
+- Cebirsel İfadeler ve Özdeşlikler
+- Doğrusal Denklemler
+- Eşitsizlikler
+- Üçgenler
+- Eşlik ve Benzerlik
+- Dönüşüm Geometrisi
+- Geometrik Cisimler
+
+### Fen Bilimleri
+- Mevsimler ve iklimler
+- DNA ve Genetik Kod
+- Basınç
+- Madde ve Endüstri
+- Periyodik Sistem
+- Fiziksel ve Kimyasal Değişimler
+- Asitler ve Bazlar
+- Basit Makineler
+- Canlılar ve Enerji İlişkileri
+- Enerji Dönüşümleri ve Çevre Bilimi
+- Elektrik Yükleri ve Elektrik Enerjisi
+
+### İnkılap Tarihi ve Atatürkçülük
+- Bir Kahraman Doğuyor
+- Milli Uyanış: Bağımsızlık Yolunda Atılan Adımlar
+- Milli Bir Destan; Ya İstiklal Ya Ölüm
+- Çağdaş Türkiye Yolunda Adımlar
+- Demokratikleşme Çabaları
+- Atatürkçülük
+- Atatürk Dönemi Türk Dış Politikası ve Atatürkün Ölümü
+- İkinci Dünya Savaşı Ve Sonrası
+
+### Yabancı Dil (İngilizce)
+- Friendship
+- Teen Life
+- In the Kitchen
+- On the Phone
+- The Internet
+- Adventures
+- Tourism
+- Chores
+- Science
+- Natural Forces
+
+### Din Kültürü ve Ahlak Bilgisi
+- KADER İNANCI
+- Kader ve Kaza İnancı
+- Kader ve Evrendeki Yasalar
+- Allah Her şeyi Bir ölçüye Göre Yaratmıştır.
+- İnsanın İradesi ve Kader
+- Kaderle İlgili Kavramlar
+- Bir Peygamber Tanıyorum: Hz. Musa (a.s.)
+- Bir Ayet Tanıyorum: Ayet el-Kürsi ve Anlamı
+- ZEKÂT VE SADAKA
+- İslamın Paylaşma ve Yardımlaşmaya Verdiği Önem
+- Zekât ve Sadaka İbadeti
+- Zekât ve Sadakanın Bireysel ve Toplumsal Faydaları
+- Bir Peygamber Tanıyorum: Hz. Şuayb (a.s.)                                        Alex LGS Koçum, aşağıdaki temel bileşenlerden oluşur:
+
+1. **Merkezi Yapay Zeka Motoru (Alex AI Core)**
+2. **Mobil/Web Arayüzü**
+3. **Veri Yönetimi ve Analiz Sistemi**
+4. **Entegrasyon Modülleri**
+5. **Kullanıcı ve Ebeveyn Portalı**
+
+### 2.2 Teknoloji Yığını
+
+#### 2.2.1 Sunucu Tarafı
+- **Dil**: Python 3.9+
+- **Framework**: FastAPI
+- **Veritabanı**: PostgreSQL + Redis (önbellek)
+- **Yapay Zeka**: 
+  - OpenAI GPT-4 (konuşma ve içerik üretimi)
+  - Özel eğitilmiş modeller (matematik problem çözme, hata analizi)
+  - Google Cloud Vision API (görsel içerik analizi)
+- **Bulut**: Google Cloud Platform
+- **Container**: Docker + Kubernetes
+
+#### 2.2.2 İstemci Tarafı
+- **Mobil**: React Native (Android ve iOS)
+- **Web**: React.js
+- **Desktop**: Electron (Windows)
+
+### 2.3 Veri Yönetimi
+
+#### 2.3.1 Kullanıcı Verileri
+- Profil bilgileri
+- Öğrenme tercihleri
+- İlerleme verileri
+- Performans metrikleri
+
+#### 2.3.2 Eğitim İçeriği
+- MEB müfredatına uygun konu verileri
+- Soru bankası (LGS çıkmış soruları, yeni nesil sorular)
+- Video ve görsel içerikler
+- Interaktif simülasyonlar
+
+#### 2.3.3 Analitik Veriler
+- Öğrenme geçmişi
+- Hata analizi verileri
+- Tekrar önerileri
+- Zaman yönetimi verileri
+
+## 3. Temel Bileşenler
+
+### 3.1 Alex AI Core (Merkezi Yapay Zeka Motoru)
+
+#### 3.1.1 Özellikler
+- Türkçe doğal dil işleme
+- Çok dilli destek (İngilizce, İspanyolca, İtalyanca)
+- Eğitim koçluğu ve motivasyon
+- Hata analizi ve telafi önerileri
+- Kişiselleştirilmiş içerik önerileri
+- Zaman yönetimi ve planlama
+
+#### 3.1.2 İşleyiş
+1. Kullanıcı girdisini alır (sesli veya yazılı)
+2. Girdiyi anlamlandırır ve bağlama göre cevap üretir
+3. Gerekli durumlarda eğitim içeriğine erişir
+4. Kullanıcı ilerleme verisini günceller
+5. Ebeveyn portalına rapor gönderir
+
+#### 3.1.3 Modüller
+- **Konuşma Modülü**: Doğal dil işleme ve konuşma sentezi
+- **Öğrenme Analizi Modülü**: Kullanıcı ilerlemesini takip eder
+- **İçerik Öneri Modülü**: Kişiselleştirilmiş içerik önerileri sunar
+- **Hata Analizi Modülü**: Yanlış yapılan soruları analiz eder
+- **Zaman Yönetimi Modülü**: Pomodoro ve diğer teknikleri uygular
+
+### 3.2 Mobil/Web Arayüzü
+
+#### 3.2.1 Ana Özellikler
+- Sesli/yazılı etkileşim
+- Eğitim içeriği görüntüleme
+- Test ve değerlendirme
+- İlerleme takibi
+- Fenerbahçe entegrasyonu
+- Oyunlaştırma öğeleri
+
+#### 3.2.2 Ekranlar
+1. **Ana Sayfa**: Günlük plan, motivasyon mesajları
+2. **Sohbet**: Alex ile etkileşim
+3. **Eğitim**: Konu anlatımları, testler
+4. **İlerleme**: Performans grafikleri, raporlar
+5. **Profil**: Kullanıcı ayarları, ilgi alanları
+6. **Fenerbahçe**: Maç takvimi, haberler
+
+### 3.3 Veri Yönetimi ve Analiz Sistemi
+
+#### 3.3.1 Özellikler
+- Gerçek zamanlı veri toplama
+- Makine öğrenimi ile analiz
+- Tahmine dayalı modelleme
+- Raporlama ve görselleştirme
+
+#### 3.3.2 Analiz Türleri
+1. **Konu Hakimiyet Analizi**
+2. **Hata Türü Analizi**
+3. **Zaman Kullanım Analizi**
+4. **Motivasyon ve Katılım Analizi**
+5. **Tahmini Performans Analizi**
+
+### 3.4 Entegrasyon Modülleri
+
+#### 3.4.1 Fenerbahçe Entegrasyonu
+- 2025-2026 maç takvimi
+- Canlı maç bildirimleri
+- Maç öncesi/sonrası motivasyon
+- Fenerbahçe temalı içerikler
+
+#### 3.4.2 Eğitim İçerikleri
+- MEB müfredatı entegrasyonu
+- Çıkmış LGS soruları
+- Video dersler (YouTube, özel içerikler)
+- İnteraktif simülasyonlar
+
+#### 3.4.3 Pomodoro ve Zaman Yönetimi
+- Pomodoro teknik uygulaması
+- Zaman takibi ve analiz
+- Dinlenme hatırlatmaları
+- Fenerbahçe maçı entegrasyonu
+
+## 4. Eğitim Yöntemleri ve Teknikler
+
+### 4.1 Görsel Hafıza Teknikleri
+
+#### 4.1.1 Uygulama
+- Konu anlatımlarında görsel öğeler
+- Mind mapping ile bilgi sunumu
+- Renkli kodlama ve şemalar
+- Hafıza sarayı tekniği
+
+#### 4.1.2 Teknoloji Desteği
+- Görsel içerik oluşturma AI
+- Interaktif görsel öğeler
+- Hafıza oyunları
+
+### 4.2 Simülasyon ve Pratik
+
+#### 4.2.1 Özellikler
+- Gerçek sınav ortamı simülasyonu
+- Zaman sınırlı testler
+- Anlık geri bildirim
+- Performans analizi
+
+#### 4.2.2 Teknoloji
+- Web tabanlı test motoru
+- Gerçek zamanlı değerlendirme
+- AI destekli soru oluşturma
+
+### 4.3 Hata Analizi ve Tekrar Sistemi
+
+#### 4.3.1 İşleyiş
+1. Yanlış yapılan soruların kaydı
+2. Hata türlerinin sınıflandırılması
+3. Benzer soruların önerilmesi
+4. Tekrar testlerinin oluşturulması
+
+#### 4.3.2 AI Desteği
+- Otomatik hata sınıflandırma
+- Kişiselleştirilmiş tekrar planı
+- Zorluk seviyesi ayarlama
+
+### 4.4 Pomodoro Tekniği
+
+#### 4.4.1 Uygulama
+- 25 dakika çalışma + 5 dakika mola
+- Uzun molalar (15-30 dakika)
+- Fenerbahçe maçı entegrasyonu
+- Motivasyonlu zaman bildirimleri
+
+#### 4.4.2 Teknoloji
+- Zamanlayıcı uygulaması
+- Bildirim sistemi
+- İstatistiksel takip
+
+## 5. Güvenlik ve Gizlilik
+
+### 5.1 Veri Koruma
+- Tüm kullanıcı verileri şifrelenir
+- GDPR ve KVKK uyumlu veri işleme
+- Ebeveyn onayı gerektiren işlemler
+- Veri silme ve indirme hakları
+
+### 5.2 Güvenlik Önlemleri
+- SSL/TLS ile veri iletimi
+- JWT token ile kimlik doğrulama
+- Regular security audits
+- DDoS koruması
+
+## 6. Performans ve Ölçeklenebilirlik
+
+### 6.1 Performans Hedefleri
+- API yanıt süresi < 200ms
+- Ses tanıma süresi < 1s
+- Görüntü işleme süresi < 500ms
+
+### 6.2 Ölçeklenebilirlik
+- Otomatik ölçeklendirme
+- Load balancing
+- CDN ile içerik dağıtımı
+- Caching stratejileri
+
+## 7. Test ve Kalite Güvencesi
+
+### 7.1 Test Türleri
+- Unit testler (%80+ coverage)
+- Integration testler
+- UI testler
+- Load testler
+- Usability testler
+
+### 7.2 Test Ortamları
+- Development
+- Staging
+- Production
+- A/B testing için Canary release
+
+## 8. Deployment ve CI/CD
+
+### 8.1 CI/CD Pipeline
+- GitHub Actions ile otomasyon
+- Otomatik testler
+- Container image oluşturma
+- Otomatik deployment
+
+### 8.2 Monitoring
+- Prometheus + Grafana ile metrikler
+- ELK stack ile log yönetimi
+- Sentry ile hata takibi
+- Uptime monitoring
+
+## 9. Bakım ve Güncelleme
+
+### 9.1 Düzenli Bakım
+- Günlük sistem kontrolleri
+- Haftalık yedek alma
+- Aylık performans değerlendirme
+- Yıllık güvenlik denetimi
+
+### 9.2 Güncelleme Politikası
+- Küçük güncellemeler: Otomatik
+- Büyük güncellemeler: Manuel onay
+- Geri alma mekanizması
+- Kullanıcı bildirim sistemi
+
+## 10. Kullanıcı ve Ebeveyn Portalı
+
+### 10.1 Kullanıcı Portalı
+- Günlük plan takibi
+- İlerleme raporları
+- Ayarlar ve tercihler
+- Geri bildirim formu
+
+### 10.2 Ebeveyn Portalı
+- Detaylı ilerleme raporları
+- Günlük/haftalık özetler
+- Zaman kullanım analizi
+- Motivasyon ve destek önerileri
+- Bildirim ayarları
+
+## 11. Entegrasyonlar ve API'ler
+
+### 11.1 İç API'ler
+- Kullanıcı yönetimi API
+- Eğitim içerik API
+- Analiz ve raporlama API
+- Bildirim API
+
+### 11.2 Dış Entegrasyonlar
+- Fenerbahçe API (maç takvimi)
+- YouTube API (video içerikler)
+- Google Cloud AI API (görsel/ses işleme)
+- OpenAI API (doğal dil işleme)
+
+## 12. Gelecek Geliştirmeler
+
+### 12.1 Kısa Vadeli (3-6 ay)
+- Sesli komut desteği
+- Daha fazla oyunlaştırma öğesi
+- Arkadaş etkileşimi özellikleri
+- Gelişmiş AI mentor özellikleri
+
+### 12.2 Uzun Vadeli (6-12 ay)
+- VR/AR destekli öğrenme
+- Daha fazla dil desteği
+- Gelişmiş sosyal özellikler
+- Üniversite hazırlık modülü
+
+## 13. Sorun Giderme ve Destek
+
+### 13.1 Yaygın Sorunlar
+- Ses tanıma sorunları
+- Bağlantı kesilmesi
+- İçerik yükleme hataları
+- Bildirim alınamaması
+
+### 13.2 Destek Kanalları
+- Uygulama içi yardım
+- E-mail desteği
+- Canlı destek (belirli saatler)
+- SSS (Sıkça Sorulan Sorular)
+
+## 14. Lisans ve Telif Hakları
+
+### 14.1 Kullanılan Teknolojiler
+- Açık kaynak kütüphaneler (MIT, Apache 2.0 lisansları)
+- Ücretsiz API'ler (Google Cloud, OpenAI eğitim kredileri)
+- Özel geliştirilmiş içerikler                               ## 1. Giriş
+
+Alex LGS Koçum, 8. sınıf öğrencisi Tuna için özel olarak geliştirilmiş bir yapay zeka eğitim koçudur. Bu kılavuz, uygulamanın nasıl kullanılacağını detaylı olarak açıklar.
+
+## 2. Kurulum
+
+### 2.1 Sistem Gereksinimleri
+
+#### Mobil Cihaz (Önerilen)
+- Android 8.0 veya üzeri
+- En az 2 GB RAM
+- 100 MB boş depolama alanı
+
+#### Web Tarayıcı
+- Chrome 80+
+- Firefox 75+
+- Safari 13+
+- Edge 80+
+
+### 2.2 Kurulum Adımları
+
+#### Android Uygulaması
+1. Google Play Store'u açın
+2. "Alex LGS Koçum" araması yapın
+3. "Yükle" butonuna tıklayın
+4. Kurulum tamamlandıktan sonra uygulamayı açın
+
+#### Web Uygulaması
+1. Tarayıcınızı açın
+2. https://alexlgskocum.example.com adresine gidin
+3. "Uygulamayı Başlat" butonuna tıklayın
+
+## 3. İlk Kullanım
+
+### 3.1 Kayıt Olma
+1. Uygulamayı açın
+2. "Yeni Hesap Oluştur" butonuna tıklayın
+3. İstenen bilgileri girin:
+   - Ad ve soyad
+   - Yaş
+   - Okul
+   - İlgi alanları (Fenerbahçe, bilgisayar oyunları vb.)
+4. Ebeveyn onayı için gerekli adımları tamamlayın
+5. "Hesap Oluştur" butonuna tıklayın
+
+### 3.2 Profil Ayarları
+1. Profil ekranını açın
+2. Şu ayarları yapılandırın:
+   - Öğrenme hedefleri
+   - Günlük çalışma süresi
+   - Tercih edilen çalışma saatleri
+   - Bildirim ayarları
+   - Fenerbahçe tercihleri (favori oyuncular, maç bildirimleri)
+
+## 4. Ana Özellikler
+
+### 4.1 Alex ile Sohbet
+Alex ile doğal dilde konuşarak eğitimle ilgili her konuda yardım alabilirsiniz.
+
+#### Konuşma Biçimleri
+- Sesli konuşma (mikrofon simgesine tıklayarak)
+- Yazılı mesaj (alttaki metin kutusuna yazarak)
+
+#### Alex'e Neler Sorabilirsiniz?
+- "Bugünkü matematik konusu nedir?"
+- "Bu soruyu nasıl çözerim?"
+- "Konuyu tekrar etmem gerekiyor mu?"
+- "Fenerbahçe'nin maçı ne zaman?"
+- "Motivasyonum düşüktü, ne yapabilirim?"
+
+### 4.2 Günlük Plan
+Uygulama, belirlediğiniz programa göre günlük plan oluşturur.
+
+#### Plan Bileşenleri
+- Okul dersleri
+- Özel çalışma süreleri
+- Dinlenme molaları
+- Fenerbahçe maçları
+- Test ve değerlendirme süreleri
+
+#### Planı Görüntüleme
+1. Ana ekrandaki "Günlük Plan" kartına tıklayın
+2. Günün detaylı planını görüntüleyin
+3. Her aktivite için zamanlayıcıyı kullanın
+
+### 4.3 Eğitim İçerikleri
+
+#### 4.3.1 Konu Anlatımları
+- MEB müfredatına uygun konu anlatımları
+- Görsel destekli açıklamalar
+- Örnek sorular ve çözümleri
+
+#### 4.3.2 Video Dersler
+- YouTube'dan entegre video dersler
+- Özel hazırlanmış içerikler
+- Konu bazlı filtreleme
+
+#### 4.3.3 Interaktif Simülasyonlar
+- 3D geometri araçları
+- Deney simülasyonları
+- Etkileşimli tablolar
+
+### 4.4 Test ve Değerlendirme
+
+#### 4.4.1 Günlük Mini Testler
+- Her gün 5 soruluk mini test
+- Konu bazlı sorular
+- Anlık geri bildirim
+
+#### 4.4.2 Haftalık Tarama Sınavları
+- Cumartesi sabahları uygulanan 25 soruluk test
+- Karma konu dağılımı
+- Detaylı performans analizi
+
+#### 4.4.3 Deneme Sınavları
+- Süreli tam uzunlukta deneme sınavları
+- Sözel ve sayısal oturumlar
+- LGS formatında değerlendirme
+
+### 4.5 İlerleme Takibi
+
+#### 4.5.1 Performans Grafikleri
+- Konu bazlı başarı oranları
+- Zaman içindeki gelişim
+- Hedefe ulaşma durumu
+
+#### 4.5.2 Günlük Raporlar
+- Tamamlanan aktiviteler
+- Harcanan süre
+- Başarı metrikleri
+
+#### 4.5.3 Ebeveyn Raporları
+- Haftalık detaylı raporlar
+- Zayıf yönler ve öneriler
+- Motivasyon durumu
+
+## 5. Zaman Yönetimi ve Pomodoro
+
+### 5.1 Pomodoro Tekniği
+Uygulama, 25 dakika çalışma + 5 dakika mola şeklinde Pomodoro teknikini kullanır.
+
+#### Kullanım
+1. "Pomodoro Başlat" butonuna tıklayın
+2. Çalışma süresi boyunca odaklanın
+3. Mola zamanında bildirim alacaksınız
+4. 4 Pomodoro sonrasında uzun mola (15-30 dakika)
+
+### 5.2 Zamanlayıcı
+- Görev bazlı zamanlayıcı
+- Geri sayım özelliği
+- Görsel ve sesli bildirimler
+
+## 6. Fenerbahçe Entegrasyonu
+
+### 6.1 Maç Takvimi
+- 2025-2026 sezonu maç takvimi
+- Ülke içi ve dışı maçlar
+- Canlı maç bildirimleri
+
+### 6.2 Özel Haklar
+- Maç öncesi motivasyon
+- Maç sonrası analiz
+- Fenerbahçe temalı içerikler
+
+### 6.3 Fenerbahçe Haberleri
+- Son dakika haberleri
+- Oyuncu profilleri
+- Teknik ekip analizleri
+
+## 7. Oyunlaştırma ve Motivasyon
+
+### 7.1 Rozet ve Başarımlar
+- Tamamlanan görevler için rozetler
+- Başarı seviyeleri
+- Sıralama listeleri
+
+### 7.2 Günlük ve Haftalık Hedefler
+- Gerçekleştirilebilir hedefler
+- Ödüllendirme sistemi
+- İlerleme takibi
+
+### 7.3 Motivasyon Botu
+- Günlük motivasyon mesajları
+- Başarı hikayeleri
+- Tebrik ve destek mesajları
+
+## 8. Hata Analizi ve Telafi
+
+### 8.1 Hataların Kaydedilmesi
+- Yanlış yapılan sorular otomatik olarak kaydedilir
+- Hata türü sınıflandırması yapılır
+- Zorluk seviyesi belirlenir
+
+### 8.2 Telafi Önerileri
+- Benzer sorular önerilir
+- Konu tekrarı planlanır
+- Ek kaynaklar sunulur
+
+### 8.3 Gelişim Raporu
+- Hata azalma grafiği
+- Konu hakimiyeti artışı
+- Süre optimizasyonu
+
+## 9. Ebeveyn Portalı
+
+### 9.1 Erişim
+- https://alexlgskocum.example.com/ebveyn
+- E-posta ve şifre ile giriş
+
+### 9.2 Özellikler
+- Detaylı ilerleme raporları
+- Günlük/haftalık özetler
+- Zaman kullanım analizi
+- Motivasyon ve destek önerileri
+- Bildirim ayarları
+
+## 10. Sorun Giderme
+
+### 10.1 Yaygın Sorunlar ve Çözümleri
+
+#### Ses Tanıma Sorunları
+**Sorun**: Alex sesimi tanımıyor
+**Çözüm**:
+1. Mikrofon izinlerini kontrol edin
+2. Arka plandaki gürültüyü azaltın
+3. Uygulamayı yeniden başlatın
+4. Cihaz ses ayarlarını kontrol edin
+
+#### Bağlantı Kesilmesi
+**Sorun**: Uygulama internet bağlantısı kuramıyor
+**Çözüm**:
+1. İnternet bağlantınızı kontrol edin
+2. Wi-Fi veya mobil veri değiştirmeyi deneyin
+3. Uygulamayı kapatıp tekrar açın
+4. Cihazınızı yeniden başlatın
+
+#### İçerik Yükleme Hataları
+**Sorun**: Video veya içerik yüklenmiyor
+**Çözüm**:
+1. İnternet hızınızı kontrol edin
+2. Uygulamayı kapatıp tekrar açın
+3. Cihaz belleğini kontrol edin
+4. Uygulama için gerekli izinleri verin
+
+#### Bildirim Alınamaması
+**Sorun**: Maç veya çalışma bildirimleri gelmiyor
+**Çözüm**:
+1. Bildirim ayarlarını kontrol edin
+2. Cihaz bildirim izinlerini kontrol edin
+3. Uygulama bildirim ayarlarını sıfırlayın
+4. Ebeveyn portalından bildirim tercihlerini gözden geçirin                 # Alex LGS Koçum - Geliştirici Rehberi

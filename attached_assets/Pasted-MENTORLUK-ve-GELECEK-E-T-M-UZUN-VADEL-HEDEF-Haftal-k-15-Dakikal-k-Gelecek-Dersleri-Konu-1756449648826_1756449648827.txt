@@ -1,0 +1,180 @@
+MENTORLUK ve GELECEK EĞİTİMİ (UZUN VADELİ HEDEF)
+
+Haftalık 15 Dakikalık "Gelecek Dersleri"
+
+Konular: Python, Oyun Geliştirme, Yapay Zeka, Veri Bilimi, Geleceğin Meslekleri
+
+LGS SonrasTAM HARİTA – ANA BAŞLIKLAR & ALT BAŞLIKLAR
+1. Uygulamanın Amacı ve Genel Vizyon
+
+Tuna’nın LGS 2025-2026 sınavına hazırlanması
+
+Hedef: İlk 1000 başarı sırası
+
+MEB müfredatına %100 uyum
+
+Disiplinli ama gelişim odaklı yaklaşım
+
+Uygulamanın gerçek, hatasız, canlı deploy edilebilir olması
+
+Matematik ve Türkçe'ye Özel 
+
+Vurgu Zaman Kaybını Önleyen Akıllı Planlama
+
+Çocuğun geleceği için “en iyi kalite” prensibi
+
+2. Alex: Kişiselleştirilmiş Mentor + Öğretmen Hibrit Modeli
+
+Öğretmen rolü: konu anlatımı, soru çözümü
+
+Koç rolü: motivasyon, yönlendirme, ilgi alanlarıyla bağlantı
+
+Hyper-zeki, matematik mühendisi yapay zekâ persona
+
+Fenerbahçe temalı, karakter özelleştirme
+
+Çok dilli destek (TR, EN, DE, ES, IT)
+
+Haftada 10 dk dil dersi (Pazar günü)
+
+MENTORLUK ve GELECEK EĞİTİMİ (UZUN VADELİ HEDEF)
+
+Haftalık 15 Dakikalık "Gelecek Dersleri"
+
+Konular: Python, Oyun Geliştirme, Yapay Zeka, Veri Bilimi, Geleceğin Meslekleri
+
+3. Öğrenme Yöntemi ve Stratejiler
+
+Tamamen dokunmatik + sesli + animasyonlu sistem (yazma yok)
+
+Kavrayarak öğrenme (görsel hafıza teknikleri)
+
+Aralıklı tekrar (Spaced Repetition)
+
+Hafta içi/sonu 3 tekrar kuralı
+
+“Hatırla Oyunu” ile pekiştirme
+
+Pomodoro tekniği (2–3 saatlik günlük çalışma)
+
+Hataların anında kaydı ve telafisi
+
+Haftalık “15 dk Gelecek Dersi”: Python, oyun geliştirme, AI, veri bilimi
+
+4. MEB 8. Sınıf Müfredatı (2025-2026)
+
+Matematik: Çarpanlar, Üslü/Kareköklü ifadeler, Denklemler, Geometri, Veri Analizi vb.
+
+Fen: DNA, Basit Makineler, Enerji, Basınç, Madde ve Endüstri
+
+T.C. İnkılap Tarihi: Milli Uyanış, İstiklal Harbi, Atatürkçülük, Demokratikleşme, Atatürk’ün Ölümü
+
+Din Kültürü: Kader, Zekât, Sadaka, Hz. Muhammed’in Örnekliği, Kur’an
+
+Türkçe: Erdemler, Milli Kültür, Okuma Kültürü, Birey & Toplum, Bilim & Teknoloji
+
+İngilizce: Friendship, Teen Life, Internet, Tourism, Science vb.
+
+Ek: LGS 2020–2025 çıkmış sorular + yeni nesil sorular
+
+5. İçerik, Kaynak Yönetimi ve Kişiselleştirme
+
+Doğru kaynak seçimi ve analiz
+
+Zaman kaybını önleme, verimliliği artırma
+
+Yapay zekâ ile:
+
+Eksik konuları nokta atışı belirleme
+
+Çıkma ihtimali yüksek konuları önceliklendirme
+
+Hızlı telafi programları
+
+Öğrenciye özel kişiselleştirilmiş öğrenme yolları
+
+6. Gamification (Oyunlaştırma) ve Ödüllendirme
+
+Puan sistemi: Doğru soru → puan
+
+Puanlarla: Alex’e kıyafet, ödül, ek oyun süresi
+
+Haftalık hedef tamamlama → “Serbest Oyun Saati” açılır
+
+Futbol metaforları: “Gol at, defansı geç”
+
+Ödül mekanizmaları: Maç izleme, ek oyun hakkı
+
+7. Fenerbahçe Entegrasyonu ve Spor Tabanlı Motivasyon
+
+2025–2026 fikstürü uygulamaya entegre
+
+Maç günleri: görev tamamlama → tam maç izleme
+
+Görev eksik → 30 dk sınırlı izin
+
+Futbol motivasyonu ile ders metaforları
+
+8. İlerleme Takibi, Raporlama ve Aile Paneli
+
+Haftalık raporlar:
+
+Çalışma süresi
+
+Başarı oranı
+
+Hata analizi
+
+Öneriler
+
+Aile için ayrı panel (Android + Web)
+
+Sesli & metinli haftalık raporlar
+
+Planlama: okul, maç ve dinlenme saatlerine göre uyum
+
+9. Teknik Altyapı ve Uygulama Özellikleri
+
+Frontend: Flutter (Android, iOS, Web)
+
+Backend & Database: Firebase
+
+Seslendirme: ElevenLabs veya benzeri (genç & dostça ses)
+
+Animasyon: Lottie / MP4 ders filmleri
+
+Çoklu dil desteği
+
+Yüksek kontrastlı tasarım (okunabilirlik)
+
+Güvenlik: içerik sadece Tuna’ya özel
+
+10. Deployment ve Teslim Süreci
+
+Uygulama bittiğinde canlıya alma (deploy) süreci
+
+APK, App Store, Web yayınlama adımları
+
+Tüm talimatlar kopyalanabilir .txt formatında teslim
+
+“Tam yetki” onayıyla ilerleme
+
+11. Kurallar ve Eğitim Felsefesi
+
+Negatif/stresli/ürkütücü dil kullanılmaz
+
+Hata = öğrenmenin doğal parçası
+
+Dersler öğrencinin ilgisine göre eğlenceli hale getirilir
+
+Güvenli, kişiye özel içerik
+
+Çocuğun gelişimi merkeze alınır
+
+12. Sonuç & Beklenen Çıktı
+
+Alex = Öğretmen + Mentor hibrit yapay zekâ koç
+
+Eğlenceli, oyunlaştırılmış, disiplinli sistem
+
+Hem LGS’ye hazırlar hem de geleceğe yönlendirirı Hayata ve Kariyere Hazırlık, Ufuk Açma
