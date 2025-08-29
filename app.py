@@ -40,11 +40,44 @@ st.markdown("""
 <style>
     /* Ana sayfa arka planı */
     .main > div {
-        background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/');
+        background: linear-gradient(135deg, rgba(31,42,68,0.95), rgba(255,220,0,0.1));
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
         min-height: 100vh;
+        position: relative;
+    }
+    
+    .main > div::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(circle at 20% 50%, rgba(255,220,0,0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(31,42,68,0.1) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(255,220,0,0.05) 0%, transparent 50%);
+        z-index: -1;
+        pointer-events: none;
+    }
+    
+    /* Sayfa özel arka planları */
+    .study-page-bg {
+        background: linear-gradient(135deg, rgba(255,220,0,0.1), rgba(31,42,68,0.9));
+    }
+    
+    .games-page-bg {
+        background: linear-gradient(135deg, rgba(31,42,68,0.9), rgba(255,220,0,0.2));
+    }
+    
+    .fenerbahce-page-bg {
+        background: linear-gradient(45deg, rgba(255,220,0,0.3), rgba(31,42,68,0.8));
+    }
+    
+    .progress-page-bg {
+        background: linear-gradient(135deg, rgba(31,42,68,0.8), rgba(255,220,0,0.1));
     }
     
     .main-header {
@@ -64,30 +97,28 @@ st.markdown("""
         height: 120px;
         border-radius: 50%;
         border: 4px solid #FFDC00;
-        background: linear-gradient(135deg, #1F2A44, #FFDC00, #1F2A44);
+        background: linear-gradient(135deg, #1F2A44, #FFDC00);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
-        font-size: 28px;
-        font-weight: bold;
         margin: 15px auto;
         box-shadow: 
             0 0 20px rgba(255,220,0,0.6),
-            inset 0 0 20px rgba(255,220,0,0.3);
+            inset 0 0 20px rgba(255,220,0,0.2);
         animation: pulse 2s infinite;
         position: relative;
         overflow: hidden;
+        font-size: 60px;
     }
     
     .alex-avatar::before {
         content: '🤖';
         position: absolute;
-        font-size: 60px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 2;
+        z-index: 3;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
     
     .alex-avatar::after {
@@ -294,6 +325,7 @@ def show_home_page():
 
 def show_study_page():
     """Advanced study page with memory techniques"""
+    st.markdown('<div class="study-page-bg"></div>', unsafe_allow_html=True)
     st.markdown('<div class="main-header"><h2>🧠 Süper Öğrenme Laboratuvarı!</h2></div>', unsafe_allow_html=True)
     
     # Alex'in gelişmiş önerileri
@@ -387,6 +419,7 @@ def show_study_page():
 
 def show_games_page():
     """Gamification page with rewards and challenges"""
+    st.markdown('<div class="games-page-bg"></div>', unsafe_allow_html=True)
     st.markdown('<div class="main-header"><h2>🎮 Oyunlar ve Ödüller</h2></div>', unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
@@ -447,6 +480,7 @@ def show_games_page():
 
 def show_fenerbahce_page():
     """Fenerbahçe integration page"""
+    st.markdown('<div class="fenerbahce-page-bg"></div>', unsafe_allow_html=True)
     st.markdown('<div class="main-header"><h2>⚽ FENERBAHÇE - FORZA FB! 💛💙</h2></div>', unsafe_allow_html=True)
     
     # Team colors
@@ -509,6 +543,7 @@ def show_fenerbahce_page():
 
 def show_progress_page():
     """Progress tracking and analytics"""
+    st.markdown('<div class="progress-page-bg"></div>', unsafe_allow_html=True)
     st.markdown('<div class="main-header"><h2>📊 İlerleme Raporum</h2></div>', unsafe_allow_html=True)
     
     # Time period selection

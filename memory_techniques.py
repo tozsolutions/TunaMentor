@@ -1,4 +1,3 @@
-
 import json
 import random
 from typing import Dict, List, Any
@@ -17,44 +16,86 @@ class MemoryTechniques:
             "warning": "#FFEAA7",        # Sarı - Uyarı
             "connection": "#DDA0DD"      # Mor - Bağlantı
         }
-    
-    def create_mind_map(self, subject: str, topic: str, content: Dict) -> Dict:
-        """Zihin haritası oluştur"""
-        mind_map = {
-            "center_topic": topic,
-            "subject": subject,
-            "created_date": datetime.now().isoformat(),
-            "branches": [],
-            "colors": self.color_codes,
-            "connections": []
+
+    def create_color_coded_mind_map(self, central_topic: str, subtopics: list, connections: dict = None, colors: dict = None) -> dict:
+        """
+        # Gelişmiş renk kodlama sistemi
+        default_colors = {
+            "ana_konu": "#FFDC00",  # Fenerbahçe sarısı
+            "onemli": "#FF0000",    # Kırmızı - çok önemli
+            "orta": "#FFA500",      # Turuncu - orta önem
+            "detay": "#1F2A44",     # Fenerbahçe lacivert
+            "ornekler": "#00FF00",  # Yeşil - örnekler
+            "formul": "#FF00FF",    # Mor - formüller
+            "tanim": "#00FFFF"      # Cyan - tanımlar
         }
+
+        color_scheme = colors or default_colors
+
+        mind_map = {
+            "central_topic": central_topic,
+            "subtopics": [],
+            "visual_elements": [],
+            "connections": connections or {},
+            "color_scheme": color_scheme,
+            "creation_time": datetime.now().isoformat(),
+            "study_effectiveness": "Yüksek"
+        }
+        """
+        # The following code is a placeholder as the previous code block was just a docstring.
+        # The actual implementation of create_color_coded_mind_map would go here,
+        # but it was not provided in the changes.
+        # Based on the original create_mind_map, we can infer a structure.
         
-        # Ana dalları oluştur
-        if "main_concepts" in content:
-            for concept in content["main_concepts"]:
+        default_colors = {
+            "ana_konu": "#FFDC00",  # Fenerbahçe sarısı
+            "onemli": "#FF0000",    # Kırmızı - çok önemli
+            "orta": "#FFA500",      # Turuncu - orta önem
+            "detay": "#1F2A44",     # Fenerbahçe lacivert
+            "ornekler": "#00FF00",  # Yeşil - örnekler
+            "formul": "#FF00FF",    # Mor - formüller
+            "tanim": "#00FFFF"      # Cyan - tanımlar
+        }
+
+        color_scheme = colors or default_colors
+
+        mind_map = {
+            "central_topic": central_topic,
+            "subtopics": [],
+            "visual_elements": [],
+            "connections": connections or {},
+            "color_scheme": color_scheme,
+            "creation_time": datetime.now().isoformat(),
+            "study_effectiveness": "Yüksek"
+        }
+
+        # Ana dalları oluştur (orijinal fonksiyondaki mantığı kullanarak)
+        if subtopics:
+            for i, subtopic in enumerate(subtopics):
                 branch = {
-                    "id": f"branch_{len(mind_map['branches'])}",
-                    "title": concept["name"],
-                    "color": self.color_codes.get(concept.get("type", "definition")),
-                    "sub_branches": concept.get("details", []),
-                    "keywords": concept.get("keywords", []),
-                    "visual_elements": concept.get("visuals", [])
+                    "id": f"branch_{len(mind_map['subtopics'])}",
+                    "title": subtopic.get("name", f"Alt Konu {i+1}"),
+                    "color": color_scheme.get(subtopic.get("type", "detay")), # Varsayılan olarak detay rengini kullan
+                    "sub_branches": subtopic.get("details", []),
+                    "keywords": subtopic.get("keywords", []),
+                    "visual_elements": subtopic.get("visuals", [])
                 }
-                mind_map["branches"].append(branch)
-        
-        # Bağlantıları oluştur
-        mind_map["connections"] = self._create_connections(mind_map["branches"])
-        
+                mind_map["subtopics"].append(branch)
+
+        # Bağlantıları oluştur (orijinal fonksiyondaki mantığı kullanarak)
+        mind_map["connections"] = self._create_connections(mind_map["subtopics"])
+
         # Hafızaya kaydet
-        map_id = f"{subject}_{topic}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+        map_id = f"{central_topic.replace(' ', '_')}_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
         self.mind_maps[map_id] = mind_map
-        
+
         return {"map_id": map_id, "mind_map": mind_map}
-    
+
+
     def _create_connections(self, branches: List[Dict]) -> List[Dict]:
         """Dallar arası bağlantı oluştur"""
         connections = []
-        
+
         for i, branch1 in enumerate(branches):
             for j, branch2 in enumerate(branches[i+1:], i+1):
                 # Ortak kelimeler varsa bağlantı kur
@@ -67,9 +108,9 @@ class MemoryTechniques:
                         "common_elements": list(common_keywords),
                         "strength": len(common_keywords)
                     })
-        
+
         return connections
-    
+
     def create_memory_palace(self, username: str, subject: str, location_type: str = "home") -> Dict:
         """Zihin sarayı oluştur"""
         palace_templates = {
@@ -98,9 +139,9 @@ class MemoryTechniques:
                 "route": ["Okul Bahçesi", "Sınıf", "Koridor", "Kütüphane", "Laboratuvar", "Kantin"]
             }
         }
-        
+
         template = palace_templates.get(location_type, palace_templates["home"])
-        
+
         palace = {
             "palace_id": f"{username}_{subject}_{location_type}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
             "username": username,
@@ -111,27 +152,27 @@ class MemoryTechniques:
             "last_accessed": datetime.now().isoformat(),
             "access_count": 0
         }
-        
+
         self.memory_palaces[palace["palace_id"]] = palace
         return palace
-    
+
     def store_information_in_palace(self, palace_id: str, information: Dict) -> bool:
         """Bilgiyi zihin sarayına yerleştir"""
         if palace_id not in self.memory_palaces:
             return False
-        
+
         palace = self.memory_palaces[palace_id]
         rooms = palace["template"]["rooms"]
-        
+
         for info_item in information.get("items", []):
             # En uygun odayı bul
             best_room = self._find_best_room(rooms, info_item)
-            
+
             if best_room:
                 room_name = best_room["name"]
                 if room_name not in palace["stored_information"]:
                     palace["stored_information"][room_name] = []
-                
+
                 # Bilgiyi görsel öğelerle zenginleştir
                 enhanced_info = {
                     "content": info_item["content"],
@@ -140,16 +181,16 @@ class MemoryTechniques:
                     "position": len(palace["stored_information"][room_name]) + 1,
                     "stored_date": datetime.now().isoformat()
                 }
-                
+
                 palace["stored_information"][room_name].append(enhanced_info)
-        
+
         palace["last_accessed"] = datetime.now().isoformat()
         return True
-    
+
     def _find_best_room(self, rooms: List[Dict], info_item: Dict) -> Dict:
         """Bilgi için en uygun odayı bul"""
         content_type = info_item.get("type", "general")
-        
+
         type_mapping = {
             "definition": "main_concepts",
             "formula": "formulas", 
@@ -158,71 +199,71 @@ class MemoryTechniques:
             "introduction": "introduction",
             "connection": "connections"
         }
-        
+
         target_room_type = type_mapping.get(content_type, "main_concepts")
-        
+
         # Hedef oda tipini bul
         for room in rooms:
             if room["type"] == target_room_type:
                 return room
-        
+
         # Bulunamazsa ilk odayı döndür
         return rooms[0] if rooms else None
-    
+
     def _create_visual_cue(self, content: str) -> str:
         """İçerik için görsel ipucu oluştur"""
         visual_cues = [
             "🔥 Yanıyor", "⚡ Işıldıyor", "🌈 Renkli", "💎 Parlıyor",
             "🎭 Dans ediyor", "🚀 Uçuyor", "🌊 Dalgalanıyor", "⭐ Pırıldıyor"
         ]
-        
+
         return random.choice(visual_cues)
-    
+
     def _create_emotional_tag(self, content: str) -> str:
         """İçerik için duygusal etiket oluştur"""
         emotions = [
             "🎉 Heyecanlı", "😌 Rahatlatıcı", "🤔 Merak uyandıran", 
             "💪 Güç veren", "🎯 Odaklanmış", "✨ İlham verici"
         ]
-        
+
         return random.choice(emotions)
-    
+
     def take_mental_walk(self, palace_id: str) -> Dict:
         """Zihinsel yürüyüş yap"""
         if palace_id not in self.memory_palaces:
             return {"error": "Palace not found"}
-        
+
         palace = self.memory_palaces[palace_id]
         route = palace["template"]["route"]
         stored_info = palace["stored_information"]
-        
+
         mental_walk = {
             "palace_name": palace["template"]["name"],
             "total_rooms": len(route),
             "route_map": [],
             "total_information": 0
         }
-        
+
         for room_name in route:
             room_data = {
                 "room_name": room_name,
                 "information_count": len(stored_info.get(room_name, [])),
                 "information_items": stored_info.get(room_name, [])
             }
-            
+
             mental_walk["route_map"].append(room_data)
             mental_walk["total_information"] += room_data["information_count"]
-        
+
         # Erişim sayacını artır
         palace["access_count"] += 1
         palace["last_accessed"] = datetime.now().isoformat()
-        
+
         return mental_walk
-    
+
     def create_flash_cards(self, subject: str, topic: str, content: List[Dict]) -> List[Dict]:
         """Görsel flash kartlar oluştur"""
         flash_cards = []
-        
+
         for item in content:
             card = {
                 "card_id": f"card_{len(flash_cards)+1}_{datetime.now().strftime('%H%M%S')}",
@@ -244,11 +285,11 @@ class MemoryTechniques:
                 "review_count": 0,
                 "accuracy_rate": 0
             }
-            
+
             flash_cards.append(card)
-        
+
         return flash_cards
-    
+
     def _create_visual_hint(self, text: str) -> str:
         """Metin için görsel ipucu oluştur"""
         if "matematik" in text.lower() or "sayı" in text.lower():
@@ -259,7 +300,7 @@ class MemoryTechniques:
             return "🔬"
         else:
             return "💡"
-    
+
     def _assign_card_color(self, subject: str) -> str:
         """Derse göre kart rengi ata"""
         subject_colors = {
@@ -270,9 +311,9 @@ class MemoryTechniques:
             "Din Kültürü": "#FFEAA7",
             "İngilizce": "#DDA0DD"
         }
-        
+
         return subject_colors.get(subject, "#95A5A6")
-    
+
     def _create_memory_aid(self, answer: str) -> str:
         """Cevap için hafıza yardımcısı oluştur"""
         aids = [
@@ -282,5 +323,5 @@ class MemoryTechniques:
             f"🤝 '{answer}' ile hareket yap!",
             f"🏠 '{answer}' evinde nerede olurdu?"
         ]
-        
+
         return random.choice(aids)
