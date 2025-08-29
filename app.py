@@ -13,7 +13,7 @@ from voice_synthesis import VoiceSynthesis
 import time
 import pandas as pd
 
-# Initialize session state
+# Initialize session state with advanced learning systems
 if 'db' not in st.session_state:
     st.session_state.db = Database()
     st.session_state.alex = AlexAI()
@@ -24,34 +24,115 @@ if 'db' not in st.session_state:
     st.session_state.parent_dash = ParentDashboard(st.session_state.db)
     st.session_state.planner = StudyPlanner(st.session_state.db)
     st.session_state.voice = VoiceSynthesis()
+    
+    # Gelişmiş öğrenme sistemleri
+    from memory_techniques import MemoryTechniques
+    st.session_state.memory = MemoryTechniques()
+    
     st.session_state.user_authenticated = False
     st.session_state.current_session = None
+    st.session_state.current_memory_palace = None
+    st.session_state.active_mind_map = None
+    st.session_state.spaced_repetition_queue = []
 
-# Custom CSS for Fenerbahçe theme
+# Custom CSS for Fenerbahçe theme with background images
 st.markdown("""
 <style>
+    /* Ana sayfa arka planı */
+    .main > div {
+        background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+    }
+    
     .main-header {
-        background: linear-gradient(90deg, #FFDC00, #1F2A44);
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
+        background: linear-gradient(135deg, rgba(255,220,0,0.95), rgba(31,42,68,0.95));
+        backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: 15px;
+        margin-bottom: 25px;
         text-align: center;
         color: white;
         font-weight: bold;
+        box-shadow: 0 8px 32px rgba(255,220,0,0.3);
+        border: 2px solid rgba(255,220,0,0.4);
     }
     .alex-avatar {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
-        border: 3px solid #FFDC00;
-        background: linear-gradient(45deg, #1F2A44, #FFDC00);
+        border: 4px solid #FFDC00;
+        background: linear-gradient(135deg, #1F2A44, #FFDC00, #1F2A44);
         display: flex;
         align-items: center;
         justify-content: center;
         color: white;
-        font-size: 24px;
+        font-size: 28px;
         font-weight: bold;
-        margin: 10px auto;
+        margin: 15px auto;
+        box-shadow: 
+            0 0 20px rgba(255,220,0,0.6),
+            inset 0 0 20px rgba(255,220,0,0.3);
+        animation: pulse 2s infinite;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .alex-avatar::before {
+        content: '🤖';
+        position: absolute;
+        font-size: 60px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+    
+    .alex-avatar::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+        animation: shine 3s infinite;
+        z-index: 1;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    
+    @keyframes shine {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .alex-speech-bubble {
+        background: rgba(255,255,255,0.95);
+        border: 2px solid #FFDC00;
+        border-radius: 20px;
+        padding: 15px;
+        margin: 10px;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        backdrop-filter: blur(5px);
+    }
+    
+    .alex-speech-bubble::before {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 30px;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid #FFDC00;
     }
     .progress-card {
         background: white;
@@ -212,8 +293,30 @@ def show_home_page():
                 st.rerun()
 
 def show_study_page():
-    """Study page with lessons and questions"""
-    st.markdown('<div class="main-header"><h2>📖 Ders Çalışma Zamanı!</h2></div>', unsafe_allow_html=True)
+    """Advanced study page with memory techniques"""
+    st.markdown('<div class="main-header"><h2>🧠 Süper Öğrenme Laboratuvarı!</h2></div>', unsafe_allow_html=True)
+    
+    # Alex'in gelişmiş önerileri
+    col1, col2 = st.columns([1, 3])
+    with col1:
+        st.markdown('<div class="alex-avatar"></div>', unsafe_allow_html=True)
+    with col2:
+        alex_tip = st.session_state.alex.get_advanced_learning_tip()
+        st.markdown(f'<div class="alex-speech-bubble">{alex_tip}</div>', unsafe_allow_html=True)
+        
+        if st.button("🔊 Alex'i Dinle"):
+            st.session_state.voice.speak(alex_tip, emotion="explaining")
+    
+    # Öğrenme tekniği seçimi
+    st.markdown("### 🎯 Öğrenme Tekniği Seç")
+    learning_method = st.selectbox("🧠 Nasıl öğrenmek istiyorsun?", [
+        "🏰 Zihin Sarayı ile Öğren",
+        "🗺️ Zihin Haritası Oluştur", 
+        "⚡ Aktif Geri Getirme",
+        "🔄 Aralıklı Tekrar",
+        "🎴 Görsel Flash Kartlar",
+        "📚 Klasik Ders Çalışma"
+    ])
     
     # Subject selection
     subject = st.selectbox("📚 Ders Seç:", [

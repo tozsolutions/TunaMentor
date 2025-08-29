@@ -3,6 +3,195 @@ import tempfile
 import streamlit as st
 from typing import Optional
 import base64
+import json
+import requests
+from datetime import datetime
+
+class VoiceSynthesis:
+    def __init__(self):
+        self.voice_settings = {
+            "alex_voice": {
+                "rate": 1.0,
+                "pitch": 1.1,
+                "volume": 0.8,
+                "voice_type": "friendly_teacher"
+            },
+            "languages": {
+                "turkish": "tr-TR",
+                "english": "en-US"
+            },
+            "emotion_modes": {
+                "encouraging": {"pitch": 1.2, "rate": 0.9},
+                "explaining": {"pitch": 1.0, "rate": 0.8},
+                "celebrating": {"pitch": 1.3, "rate": 1.1},
+                "comforting": {"pitch": 0.9, "rate": 0.7}
+            }
+        }
+        
+        self.alex_personality_voices = {
+            "greeting": "🎵 Merhaba Tuna! Ben Alex, senin süper zeki matematik mentöörün!",
+            "encouragement": [
+                "💪 Harika gidiyorsun! Beynin şu anda güçleniyor!",
+                "⭐ Sen gerçekten yeteneklisin! Devam et!",
+                "🚀 Her doğru cevap seni hedefe yaklaştırıyor!",
+                "🎯 Mükemmel! Zihnin çok hızlı çalışıyor!"
+            ],
+            "mistake_support": [
+                "😊 Hiç sorun değil! Hatalar öğrenmenin en önemli parçası!",
+                "💡 Bu hata sana yeni bir şey öğretti! Harika!", 
+                "🎈 Yanılmak cesaret gerektirir! Sen çok cesursun!",
+                "🌟 Her hata seni daha güçlü yapıyor!"
+            ],
+            "learning_tips": [
+                "🧠 Şimdi gözlerini kapat ve konuyu zihninde canlandır!",
+                "🏠 Bu bilgiyi evinin hangi odasına yerleştirirsin?",
+                "🎨 Bu konuyu resim yaparak hatırlar mısın?",
+                "🎵 Bu formülü şarkı haline getirebilir miyiz?"
+            ]
+        }
+    
+    def speak(self, text: str, emotion: str = "explaining", language: str = "turkish"):
+        """Alex'in gelişmiş ses sentezi"""
+        # Emotion ayarlarını uygula
+        emotion_settings = self.voice_settings["emotion_modes"].get(emotion, {})
+        
+        # HTML5 Web Speech API kullanarak ses çıkışı
+        speech_html = f"""
+        <script>
+        function speakText() {{
+            if ('speechSynthesis' in window) {{
+                var utterance = new SpeechSynthesisUtterance("{text}");
+                utterance.lang = "{self.voice_settings['languages'][language]}";
+                utterance.rate = {emotion_settings.get('rate', 1.0)};
+                utterance.pitch = {emotion_settings.get('pitch', 1.0)};
+                utterance.volume = {self.voice_settings['alex_voice']['volume']};
+                
+                // Alex'in özel karakteristiklerini ekle
+                utterance.onstart = function() {{
+                    console.log('Alex konuşuyor...');
+                }};
+                
+                utterance.onend = function() {{
+                    console.log('Alex konuşmasını bitirdi.');
+                }};
+                
+                speechSynthesis.speak(utterance);
+            }} else {{
+                alert('Tarayıcınız ses özelliğini desteklemiyor.');
+            }}
+        }}
+        speakText();
+        </script>
+        """
+        
+        st.components.v1.html(speech_html, height=0)
+        
+        # Konuşma logunu kaydet
+        self._log_speech_interaction(text, emotion, language)
+    
+    def get_alex_response(self, context: str, user_performance: dict) -> str:
+        """Kullanıcı performansına göre Alex'in yanıtını oluştur"""
+        if user_performance.get("is_correct", False):
+            if user_performance.get("streak", 0) >= 5:
+                response = "🔥 İnanılmaz! 5 doğru üst üste! Sen gerçek bir matematik ninjasısın! "
+                response += "Beynin şu anda nöral bağlantıları güçlendiriyor!"
+            elif user_performance.get("accuracy", 0) >= 90:
+                response = "⭐ Mükemmel! %90 üzeri başarı! Zihnin süper hızda çalışıyor!"
+            else:
+                response = random.choice(self.alex_personality_voices["encouragement"])
+        else:
+            response = random.choice(self.alex_personality_voices["mistake_support"])
+            
+            # Hafıza tekniği önerisi ekle
+            if context == "study_session":
+                response += " " + random.choice(self.alex_personality_voices["learning_tips"])
+        
+        return response
+    
+    def create_personalized_audio_lesson(self, subject: str, topic: str, user_level: str) -> dict:
+        """Kişiselleştirilmiş sesli ders oluştur"""
+        lesson_script = self._generate_lesson_script(subject, topic, user_level)
+        
+        audio_lesson = {
+            "lesson_id": f"audio_{subject}_{topic}_{datetime.now().strftime('%Y%m%d_%H%M%S')}",
+            "subject": subject,
+            "topic": topic,
+            "duration": len(lesson_script.split()) * 0.5,  # Yaklaşık konuşma süresi
+            "script": lesson_script,
+            "interactive_points": self._create_interactive_points(lesson_script),
+            "voice_settings": {
+                "emotion": "explaining",
+                "pace": "moderate",
+                "emphasis_words": self._identify_key_terms(lesson_script)
+            }
+        }
+        
+        return audio_lesson
+    
+    def _generate_lesson_script(self, subject: str, topic: str, user_level: str) -> str:
+        """Ders için ses script'i oluştur"""
+        scripts = {
+            "Matematik": {
+                "beginner": f"""
+                Merhaba Tuna! Ben Alex. Bugün {topic} konusunu birlikte öğreneceğiz.
+                
+                Önce nefes alalım ve zihnimizi rahatlatalalım. Hazır mısın?
+                
+                {topic} aslında çok basit. Şimdi gözlerini kapat ve hayal et...
+                
+                Bu konuyu öğrenmek için zihin sarayı tekniğini kullanacağız.
+                Evinin salonunu hayal et. Bu salon bizim {topic} öğrenme merkezimiz olacak.
+                
+                Şimdi bu bilgileri görsel olarak yerleştirelim...
+                """,
+                "intermediate": f"""
+                Selam Tuna! Alex burada. {topic} konusunda ilerliyorsun!
+                
+                Bugün daha derinlemesine gideceğiz. Hazırlanacağın zaman!
+                
+                Aralıklı tekrar prensibini hatırlıyor musun? Bu konuyu 1-3-7 gün sonra tekrar edeceğiz.
+                
+                Şimdi aktif geri getirme yapacağız. Dinleme, sadece hatırlamaya çalış...
+                """
+            }
+        }
+        
+        return scripts.get(subject, {}).get(user_level, f"{topic} konusunu öğreniyoruz...")
+    
+    def _create_interactive_points(self, script: str) -> list:
+        """Script'te etkileşimli noktalar oluştur"""
+        return [
+            {"time": 30, "action": "pause", "message": "Şimdi dur ve düşün..."},
+            {"time": 60, "action": "question", "message": "Bu kısmı anladın mı?"},
+            {"time": 90, "action": "visualization", "message": "Gözlerini kapat ve hayal et..."}
+        ]
+    
+    def _identify_key_terms(self, script: str) -> list:
+        """Script'teki anahtar kelimeleri belirle"""
+        key_terms = ["formül", "kural", "örnek", "çözüm", "yöntem", "teknik"]
+        found_terms = []
+        
+        for term in key_terms:
+            if term in script.lower():
+                found_terms.append(term)
+        
+        return found_terms
+    
+    def _log_speech_interaction(self, text: str, emotion: str, language: str):
+        """Ses etkileşimini logla"""
+        log_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "text_length": len(text),
+            "emotion": emotion,
+            "language": language,
+            "interaction_type": "speech_synthesis"
+        }
+        
+        # Session state'e kaydet
+        if 'speech_logs' not in st.session_state:
+            st.session_state.speech_logs = []
+        
+        st.session_state.speech_logs.append(log_entry)
 
 class VoiceSynthesis:
     def __init__(self):
