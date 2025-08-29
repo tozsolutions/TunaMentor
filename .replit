@@ -34,6 +34,23 @@ author = "agent"
 task = "shell.exec"
 args = "python app.py"
 
+[[workflows.workflow]]
+name = "APK Hazırlık"
+author = 47009862
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python final_check.py"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python build_apk.py"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"APK hazırlık tamamlandı! Android Studio ile build edebilirsiniz.\""
+
 [[ports]]
 localPort = 5000
 externalPort = 80

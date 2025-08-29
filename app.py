@@ -40,10 +40,12 @@ st.markdown("""
 <style>
     /* Ana sayfa arka planı */
     .main > div {
-        background: linear-gradient(135deg, rgba(31,42,68,0.95), rgba(255,220,0,0.1));
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background: 
+            linear-gradient(135deg, rgba(31,42,68,0.85), rgba(255,220,0,0.15)),
+            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="stars" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="2" fill="%23FFDC00" opacity="0.3"/><circle cx="80" cy="60" r="1" fill="%23FFFFFF" opacity="0.4"/><circle cx="50" cy="80" r="1.5" fill="%23FFDC00" opacity="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23stars)"/></svg>');
+        background-size: cover, 200px 200px;
+        background-position: center, 0 0;
+        background-attachment: fixed, fixed;
         min-height: 100vh;
         position: relative;
     }
@@ -56,11 +58,23 @@ st.markdown("""
         width: 100%;
         height: 100%;
         background-image: 
-            radial-gradient(circle at 20% 50%, rgba(255,220,0,0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 20%, rgba(31,42,68,0.1) 0%, transparent 50%),
-            radial-gradient(circle at 40% 80%, rgba(255,220,0,0.05) 0%, transparent 50%);
+            radial-gradient(circle at 20% 50%, rgba(255,220,0,0.2) 0%, transparent 50%),
+            radial-gradient(circle at 80% 20%, rgba(31,42,68,0.15) 0%, transparent 50%),
+            radial-gradient(circle at 40% 80%, rgba(255,220,0,0.1) 0%, transparent 50%),
+            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="30" fill="none" stroke="%23FFDC00" stroke-width="1" opacity="0.1"/><circle cx="50" cy="50" r="15" fill="none" stroke="%231F2A44" stroke-width="0.5" opacity="0.2"/></svg>');
+        background-size: auto, auto, auto, 300px 300px;
         z-index: -1;
         pointer-events: none;
+        animation: float 10s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+        0%, 100% { 
+            transform: translateY(0px) rotate(0deg); 
+        }
+        50% { 
+            transform: translateY(-20px) rotate(180deg); 
+        }
     }
     
     /* Sayfa özel arka planları */
@@ -108,17 +122,25 @@ st.markdown("""
         animation: pulse 2s infinite;
         position: relative;
         overflow: hidden;
-        font-size: 60px;
+        font-size: 48px;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        z-index: 10;
     }
     
     .alex-avatar::before {
-        content: '🤖';
+        content: 'ALEX';
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 3;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        z-index: 11;
+        font-weight: bold;
+        font-family: 'Arial', sans-serif;
+        letter-spacing: 2px;
+        text-shadow: 
+            2px 2px 4px rgba(0,0,0,0.8),
+            0 0 10px rgba(255,220,0,0.6);
     }
     
     .alex-avatar::after {
@@ -777,6 +799,24 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded"
     )
+    
+    # PWA meta tags
+    st.markdown("""
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="theme-color" content="#FFDC00">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Alex LGS">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="apple-touch-icon" href="/icon-192.png">
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('/service-worker.js');
+            }
+        </script>
+    </head>
+    """, unsafe_allow_html=True)
     
     if not st.session_state.user_authenticated:
         authenticate_user()

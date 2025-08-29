@@ -17,7 +17,7 @@ class AlexAI:
             "expertise": ["matematik", "problem çözme", "eğitim teknikleri", "görsel hafıza", "aralıklı tekrar", "aktif getirme"]
         }
 
-        # Gelişmiş Öğrenme Teknikleri
+        # Gelişmiş öğrenme sistemleri - Dünyanın en iyi öğrenme modeli
         self.learning_techniques = {
             "spaced_repetition": {
                 "name": "Aralıklı Tekrar",
@@ -48,6 +48,33 @@ class AlexAI:
                 "description": "Sözcük ve görsel bilgiyi birlikte kullanmak",
                 "combination": "verbal + visual",
                 "effectiveness": 92
+            },
+            "mind_mapping": {
+                "name": "Zihin Haritaları",
+                "description": "Konuları ana fikirden başlayarak dallara ayırıp önemli noktaları ve bağlantıları görsel olarak organize etmek",
+                "core_elements": ["merkezi_konu", "ana_dallar", "alt_dallar", "renkler", "semboller", "bağlantılar"],
+                "color_coding": {
+                    "ana_konu": "#FFDC00",
+                    "onemli": "#FF0000", 
+                    "orta": "#FFA500",
+                    "detay": "#1F2A44",
+                    "ornekler": "#00FF00",
+                    "formul": "#FF00FF"
+                },
+                "effectiveness": 94
+            },
+            "color_coding_system": {
+                "name": "Renk Kodlama Sistemi",
+                "description": "Notları farklı renklerle işaretlemek önemli bilgileri kategorize etmeye ve önceliklendirmeye yardımcı olur",
+                "color_meanings": {
+                    "kırmızı": "Çok önemli, mutlaka hatırla",
+                    "turuncu": "Önemli, dikkat et", 
+                    "sarı": "Orta önem, gözden geçir",
+                    "yeşil": "Örnekler ve uygulamalar",
+                    "mavi": "Tanımlar ve temel bilgiler",
+                    "mor": "Formüller ve kurallar"
+                },
+                "effectiveness": 89
             }
         }
 
