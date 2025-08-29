@@ -1,0 +1,73 @@
+
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-25_05"
+packages = ["glibcLocales"]
+
+[deployment]
+deploymentTarget = "autoscale"
+run = ["streamlit", "run", "app.py", "--server.port", "8080", "--server.address", "0.0.0.0"]
+
+[workflows]
+runButton = "Alex LGS Koçu Düzeltilmiş"
+
+[[workflows.workflow]]
+name = "Alex LGS Koçu"
+mode = "sequential"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run app.py --server.port 5000 --server.address 0.0.0.0"
+waitForPort = 8080
+
+[workflows.workflow.metadata]
+outputType = "webview"
+
+[[workflows.workflow]]
+name = "Python Runner"
+mode = "sequential"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python app.py"
+
+[[workflows.workflow]]
+name = "APK Hazırlık"
+author = 47009862
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python final_check.py"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python build_apk.py"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "echo \"APK hazırlık tamamlandı! Android Studio ile build edebilirsiniz.\""
+
+[[workflows.workflow]]
+name = "Alex LGS Koçu Düzeltilmiş"
+author = 47009862
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "streamlit run app.py --server.port 8080 --server.address 0.0.0.0"
+
+[[ports]]
+localPort = 8080
+externalPort = 8080
+
+[agent]
+integrations = ["python_openai==1.0.0"]
+
+[env]
+STREAMLIT_SERVER_PORT = "8080"
+STREAMLIT_SERVER_ADDRESS = "0.0.0.0"
+    
