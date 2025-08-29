@@ -16,6 +16,10 @@ class VoiceSynthesis:
                 "volume": 0.8,
                 "voice_type": "friendly_teacher"
             },
+            "custom_audio_enabled": True,
+            "audio_format": "mp3",  # veya wav
+            "audio_directory": "audio_files/"
+        },
             "languages": {
                 "turkish": "tr-TR",
                 "english": "en-US"
@@ -51,8 +55,13 @@ class VoiceSynthesis:
         }
     
     def speak(self, text: str, emotion: str = "explaining", language: str = "turkish"):
-        """Alex'in gelişmiş ses sentezi"""
-        # Emotion ayarlarını uygula
+        """Alex'in gelişmiş ses sentezi - Özel ses dosyası desteğiyle"""
+        
+        # Özel ses dosyası varsa onu kullan
+        if self._has_custom_audio_file(text, emotion):
+            return self._play_custom_audio(text, emotion)
+        
+        # Yoksa TTS kullan
         emotion_settings = self.voice_settings["emotion_modes"].get(emotion, {})
         
         # HTML5 Web Speech API kullanarak ses çıkışı
@@ -88,6 +97,70 @@ class VoiceSynthesis:
         
         # Konuşma logunu kaydet
         self._log_speech_interaction(text, emotion, language)
+    
+    def _has_custom_audio_file(self, text: str, emotion: str) -> bool:
+        """Özel ses dosyası var mı kontrol et"""
+        import os
+        audio_dir = self.voice_settings.get("audio_directory", "audio_files/")
+        
+        # Metin hash'ine göre dosya ara
+        text_hash = hash(text) % 10000
+        possible_files = [
+            f"{audio_dir}alex_{emotion}_{text_hash}.mp3",
+            f"{audio_dir}alex_{emotion}_{text_hash}.wav",
+            f"{audio_dir}alex_custom_{text_hash}.mp3",
+            f"{audio_dir}alex_custom_{text_hash}.wav"
+        ]
+        
+        for file_path in possible_files:
+            if os.path.exists(file_path):
+                return True
+        return False
+    
+    def _play_custom_audio(self, text: str, emotion: str) -> bool:
+        """Özel ses dosyasını çal"""
+        import os
+        import base64
+        
+        audio_dir = self.voice_settings.get("audio_directory", "audio_files/")
+        text_hash = hash(text) % 10000
+        
+        # Dosyayı bul
+        audio_file = None
+        for ext in ['mp3', 'wav']:
+            for prefix in [f"alex_{emotion}_{text_hash}", f"alex_custom_{text_hash}"]:
+                file_path = f"{audio_dir}{prefix}.{ext}"
+                if os.path.exists(file_path):
+                    audio_file = file_path
+                    break
+            if audio_file:
+                break
+        
+        if not audio_file:
+            return False
+        
+        try:
+            # Ses dosyasını base64'e çevir
+            with open(audio_file, "rb") as f:
+                audio_bytes = f.read()
+                audio_base64 = base64.b64encode(audio_bytes).decode()
+            
+            # HTML audio player ile çal
+            audio_html = f"""
+            <audio autoplay style="display: none;">
+                <source src="data:audio/{'mp3' if audio_file.endswith('.mp3') else 'wav'};base64,{audio_base64}" type="audio/{'mpeg' if audio_file.endswith('.mp3') else 'wav'}">
+            </audio>
+            <script>
+                console.log('Alex özel sesi çalıyor...');
+            </script>
+            """
+            
+            st.components.v1.html(audio_html, height=0)
+            return True
+            
+        except Exception as e:
+            st.error(f"Özel ses dosyası çalınamadı: {e}")
+            return False
     
     def get_alex_response(self, context: str, user_performance: dict) -> str:
         """Kullanıcı performansına göre Alex'in yanıtını oluştur"""
@@ -474,4 +547,106 @@ class VoiceSynthesis:
         
         if st.button("⚽ FORZA FENERBAHÇE! 💛💙", key="fb_cheer"):
             fenerbahce_text = f"Forza Fenerbahçe! {text} Hadi Tuna, şampiyonlar gibi çalış!"
+
+
+    def add_custom_audio(self, audio_file_path: str, text_content: str, emotion: str = "default") -> bool:
+        """Özel ses dosyası ekle"""
+        import os
+        import shutil
+        
+        # Ses dosyası klasörünü oluştur
+        audio_dir = self.voice_settings.get("audio_directory", "audio_files/")
+        os.makedirs(audio_dir, exist_ok=True)
+        
+        # Dosya adını oluştur
+        text_hash = hash(text_content) % 10000
+        file_extension = audio_file_path.split('.')[-1]
+        target_file = f"{audio_dir}alex_{emotion}_{text_hash}.{file_extension}"
+        
+        try:
+            # Dosyayı kopyala
+            shutil.copy2(audio_file_path, target_file)
+            
+            # Metadata dosyası oluştur
+            metadata_file = f"{target_file}.meta"
+            with open(metadata_file, 'w', encoding='utf-8') as f:
+                f.write(f"text: {text_content}\n")
+                f.write(f"emotion: {emotion}\n")
+                f.write(f"timestamp: {datetime.now().isoformat()}\n")
+            
+            print(f"✅ Ses dosyası eklendi: {target_file}")
+            return True
+            
+        except Exception as e:
+            print(f"❌ Ses dosyası eklenemedi: {e}")
+            return False
+    
+    def get_custom_audio_status(self) -> dict:
+        """Özel ses dosyalarının durumunu getir"""
+        import os
+        
+        audio_dir = self.voice_settings.get("audio_directory", "audio_files/")
+        
+        if not os.path.exists(audio_dir):
+            return {"enabled": False, "file_count": 0, "total_size": 0}
+        
+        files = [f for f in os.listdir(audio_dir) if f.endswith(('.mp3', '.wav'))]
+        total_size = sum(os.path.getsize(os.path.join(audio_dir, f)) for f in files)
+        
+        return {
+            "enabled": True,
+            "file_count": len(files),
+            "total_size": total_size,
+            "files": files
+        }
+    
+    def create_audio_upload_interface(self):
+        """Ses dosyası yükleme arayüzü"""
+        st.markdown("### 🎤 Özel Alex Sesi Yükle")
+        
+        uploaded_file = st.file_uploader(
+            "Alex'in sesini yükle (MP3 veya WAV)",
+            type=['mp3', 'wav'],
+            help="Alex'in konuşması için özel ses dosyası yükleyebilirsiniz"
+        )
+        
+        if uploaded_file:
+            # Ses için metin içeriği
+            text_content = st.text_area(
+                "Bu ses dosyasındaki metin:",
+                placeholder="Alex'in bu ses dosyasında ne söylediğini yazın...",
+                help="Ses dosyasının içeriğini yazın ki sistem doğru zamanda çalsın"
+            )
+            
+            emotion = st.selectbox(
+                "Duygu durumu:",
+                ["default", "explaining", "encouraging", "celebrating", "comforting"]
+            )
+            
+            if st.button("🎤 Ses Dosyasını Ekle") and text_content:
+                # Geçici dosya oluştur
+                import tempfile
+                with tempfile.NamedTemporaryFile(delete=False, suffix=f'.{uploaded_file.name.split(".")[-1]}') as tmp_file:
+                    tmp_file.write(uploaded_file.getbuffer())
+                    temp_path = tmp_file.name
+                
+                # Ses dosyasını ekle
+                if self.add_custom_audio(temp_path, text_content, emotion):
+                    st.success("🎉 Alex'in özel sesi eklendi!")
+                    
+                    # Test butonu
+                    if st.button("🔊 Test Et"):
+                        self.speak(text_content, emotion)
+                else:
+                    st.error("❌ Ses dosyası eklenemedi!")
+                
+                # Geçici dosyayı sil
+                os.unlink(temp_path)
+        
+        # Mevcut ses dosyalarını göster
+        status = self.get_custom_audio_status()
+        if status["enabled"]:
+            st.markdown(f"**📊 Mevcut özel sesler:** {status['file_count']} dosya")
+            st.markdown(f"**💾 Toplam boyut:** {status['total_size'] / 1024:.1f} KB")
+
             self.speak_motivation(fenerbahce_text)
