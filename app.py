@@ -114,6 +114,7 @@ st.markdown("""
         border-radius: 50%;
         border: 5px solid #FFDC00;
         background: 
+            url('attached_assets/ALEX_1756461389491.jpeg') center/cover,
             radial-gradient(circle at 30% 30%, #87CEEB 0%, #4169E1 100%),
             linear-gradient(135deg, #1F2A44, #FFDC00);
         display: flex;
@@ -126,7 +127,7 @@ st.markdown("""
             0 8px 16px rgba(0,0,0,0.3);
         animation: alex3d 3s infinite ease-in-out;
         position: relative;
-        overflow: visible;
+        overflow: hidden;
         font-size: 0;
         z-index: 10;
         cursor: pointer;
@@ -138,17 +139,16 @@ st.markdown("""
     }
     
     .alex-avatar::before {
-        content: '👨‍🏫';
+        content: '';
         position: absolute;
-        font-size: 80px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 12;
-        text-shadow: 
-            3px 3px 6px rgba(0,0,0,0.5),
-            0 0 15px rgba(255,220,0,0.8);
-        animation: alexBlink 4s infinite;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255,220,0,0.1);
+        border-radius: 50%;
+        z-index: 11;
+        animation: alexGlow 3s infinite;
     }
     
     .alex-avatar::after {
@@ -200,12 +200,12 @@ st.markdown("""
         }
     }
     
-    @keyframes alexBlink {
-        0%, 90%, 100% { 
-            content: '👨‍🏫';
+    @keyframes alexGlow {
+        0%, 100% { 
+            background: rgba(255,220,0,0.1);
         }
-        93%, 97% { 
-            content: '😊';
+        50% { 
+            background: rgba(255,220,0,0.3);
         }
     }
     
