@@ -1,0 +1,306 @@
+ALEX LGS KOÇU - DEPLOYMENT TALİMATLARI
+================================================
+
+Bu talimatlar Alex LGS Koçu uygulamasını canlı ortama almak için hazırlanmıştır.
+Tüm adımları sırasıyla takip ederek uygulamayı başarıyla yayınlayabilirsiniz.
+
+GEREKLI HAZIRLIKLAR
+==================
+
+1. PYTHON VE KÜTÜPHANELER
+   - Python 3.9 veya üzeri yüklü olmalı
+   - pip package manager aktif olmalı
+
+2. GEREKLI KÜTÜPHANELER (requirements.txt):
+   streamlit>=1.28.0
+   openai>=1.0.0
+   pandas>=2.0.0
+   plotly>=5.15.0
+   sqlite3 (Python ile gelir)
+   requests>=2.31.0
+
+3. API ANAHTARLARI:
+   - OpenAI API Key (GPT-5 erişimi için)
+   - Ortam değişkeni: OPENAI_API_KEY
+
+YEREL ÇALIŞMA ORTAMI KURULUMU
+============================
+
+1. DOSYALARI HAZIRLA:
+   Tüm .py dosyalarını aynı klasöre koy:
+   - app.py (ana uygulama)
+   - alex_ai.py
+   - database.py
+   - curriculum.py
+   - gamification.py
+   - fenerbahce_integration.py
+   - progress_tracker.py
+   - parent_dashboard.py
+   - study_planner.py
+   - voice_synthesis.py
+   - utils.py
+
+2. .streamlit KLASÖRÜ OLUŞTUR:
+   - .streamlit/config.toml dosyasını oluştur
+   - İçeriği:
+     [server]
+     headless = true
+     address = "0.0.0.0"
+     port = 5000
+
+3. KÜTÜPHANELER YÜKLE:
+   pip install streamlit openai pandas plotly requests
+
+4. ÇEVRE DEĞİŞKENLERİ AYARLA:
+   Windows:
+   set OPENAI_API_KEY=your_openai_api_key_here
+   
+   Linux/Mac:
+   export OPENAI_API_KEY=your_openai_api_key_here
+
+5. UYGULAMAYI BAŞLAT:
+   streamlit run app.py --server.port 5000
+
+WEB DEPLOY SEÇENEKLERI
+=====================
+
+SEÇenek 1: STREAMLIT COMMUNITY CLOUD
+------------------------------------
+1. GitHub repository oluştur
+2. Tüm dosyaları push et
+3. streamlit.io sitesinde hesap aç
+4. Repository'yi bağla
+5. Secrets bölümünde API anahtarlarını ekle:
+   OPENAI_API_KEY = "your_key_here"
+
+SEÇenek 2: HEROKU DEPLOYMENT
+----------------------------
+1. Heroku hesabı oluştur
+2. Heroku CLI yükle
+3. requirements.txt oluştur:
+   streamlit>=1.28.0
+   openai>=1.0.0
+   pandas>=2.0.0
+   plotly>=5.15.0
+   requests>=2.31.0
+
+4. Procfile oluştur:
+   web: streamlit run app.py --server.port=$PORT --server.address=0.0.0.0
+
+5. Deploy komutları:
+   heroku login
+   heroku create alex-lgs-kocu
+   heroku config:set OPENAI_API_KEY=your_key_here
+   git add .
+   git commit -m "Deploy Alex LGS Koçu"
+   git push heroku main
+
+SEÇenek 3: VPS/DEDICATED SERVER
+-------------------------------
+1. Ubuntu/Debian sunucu hazırla
+2. Python 3.9+ yükle:
+   sudo apt update
+   sudo apt install python3 python3-pip
+
+3. Uygulama dosyalarını yükle
+4. Virtual environment oluştur:
+   python3 -m venv alex_env
+   source alex_env/bin/activate
+
+5. Kütüphaneleri yükle:
+   pip install -r requirements.txt
+
+6. Systemd service oluştur (/etc/systemd/system/alex-lgs.service):
+   [Unit]
+   Description=Alex LGS Koçu
+   After=network.target
+
+   [Service]
+   Type=simple
+   User=www-data
+   WorkingDirectory=/path/to/app
+   Environment=OPENAI_API_KEY=your_key_here
+   ExecStart=/path/to/alex_env/bin/streamlit run app.py --server.port 5000
+   Restart=always
+
+   [Install]
+   WantedBy=multi-user.target
+
+7. Service'i başlat:
+   sudo systemctl enable alex-lgs
+   sudo systemctl start alex-lgs
+
+8. Nginx reverse proxy kurulumu:
+   sudo apt install nginx
+   
+   /etc/nginx/sites-available/alex-lgs:
+   server {
+       listen 80;
+       server_name your-domain.com;
+       
+       location / {
+           proxy_pass http://localhost:5000;
+           proxy_http_version 1.1;
+           proxy_set_header Upgrade $http_upgrade;
+           proxy_set_header Connection 'upgrade';
+           proxy_set_header Host $host;
+           proxy_cache_bypass $http_upgrade;
+       }
+   }
+
+   sudo ln -s /etc/nginx/sites-available/alex-lgs /etc/nginx/sites-enabled/
+   sudo nginx -t
+   sudo systemctl reload nginx
+
+GÜVENLIK AYARLARI
+================
+
+1. API ANAHTARLARI:
+   - Asla kodda hard-code etme
+   - Ortam değişkenlerini kullan
+   - Production'da secrets management kullan
+
+2. FIREWALL AYARLARI:
+   sudo ufw allow ssh
+   sudo ufw allow 80
+   sudo ufw allow 443
+   sudo ufw enable
+
+3. SSL SERTİFİKASI (Let's Encrypt):
+   sudo apt install certbot python3-certbot-nginx
+   sudo certbot --nginx -d your-domain.com
+
+PERFORMANS OPTİMİZASYONU
+=======================
+
+1. STREAMLIT CONFIG OPTİMİZASYONU:
+   [server]
+   maxUploadSize = 200
+   maxMessageSize = 200
+   enableCORS = false
+   enableXsrfProtection = true
+
+2. DATABASE OPTİMİZASYONU:
+   - SQLite WAL modu aktif et
+   - Index'leri kontrol et
+   - Backup stratejisi oluştur
+
+3. MEMORY YÖNETİMİ:
+   - @st.cache_data dekoratörlerini kullan
+   - Session state'i optimize et
+
+MONİTÖRİNG VE LOGS
+=================
+
+1. APPLICATION LOGS:
+   - Streamlit logları: ~/.streamlit/logs/
+   - Uygulama logları için logging modülü kullan
+
+2. SYSTEM MONİTÖRİNG:
+   sudo journalctl -u alex-lgs -f
+
+3. PERFORMANCE MONİTÖRİNG:
+   - htop, iotop kullan
+   - Disk kullanımını kontrol et
+   - Memory leaks'i izle
+
+BACKUP VE RECOVERY
+=================
+
+1. DATABASE BACKUP:
+   - Günlük SQLite backup
+   - Kullanıcı verilerini koru
+
+2. CODE BACKUP:
+   - Git repository güncel tut
+   - Configuration dosyalarını yedekle
+
+3. DISASTER RECOVERY PLANI:
+   - Hızlı restore prosedürü
+   - Alternative hosting hazırlığı
+
+TROUBLESHOOTING
+==============
+
+YAYGN PROBLEMLER:
+
+1. Port 5000 kullanımda:
+   - lsof -i :5000 komutuyla kontrol et
+   - Başka port kullan veya process'i sonlandır
+
+2. API key hataları:
+   - Ortam değişkenini kontrol et: echo $OPENAI_API_KEY
+   - Key'in geçerli olduğundan emin ol
+
+3. Database lock hatası:
+   - SQLite dosya permissionlarını kontrol et
+   - WAL modunu aktif et
+
+4. Memory hatası:
+   - Sistem memory'sini artır
+   - Cache ayarlarını optimize et
+
+5. CSS/Static dosyalar yüklenmiyor:
+   - Streamlit static path kontrolü
+   - CDN linklerini kontrol et
+
+TEST VE DOĞRULAMA
+================
+
+DEPLOYMENT SONRASI TEST:
+
+1. Temel Fonksiyonlar:
+   ✓ Kullanıcı girişi çalışıyor mu?
+   ✓ Alex AI yanıtlar veriyor mu?
+   ✓ Sesli özellikler aktif mi?
+   ✓ Fenerbahçe entegrasyonu çalışıyor mu?
+   ✓ Veritabanı işlemleri sorunsuz mu?
+
+2. Performance Test:
+   ✓ Sayfa yükleme süreleri
+   ✓ Concurrent kullanıcı testi
+   ✓ Memory kullanımı
+
+3. Browser Compatibility:
+   ✓ Chrome/Firefox/Safari/Edge
+   ✓ Mobile responsive design
+   ✓ Voice synthesis çalışıyor mu?
+
+MAINTENANCE
+===========
+
+GÜNLÜK:
+- Log dosyalarını kontrol et
+- Disk kullanımını izle
+- Backup'ların çalıştığını kontrol et
+
+HAFTALIK:
+- Performance metrikleri incele
+- Kullanıcı feedback'lerini değerlendir
+- Security updates kontrol et
+
+AYLIK:
+- Dependency updates
+- Database maintenance
+- Backup restore testi
+
+İLETİŞİM VE DESTEK
+=================
+
+Teknik Destek:
+- Sistem loglarını kontrol et
+- GitHub Issues kullan
+- Documentation güncel tut
+
+Kullanıcı Desteği:
+- Kullanıcı rehberini hazır tut
+- Video tutorials oluştur
+- FAQ sayfası hazırla
+
+Bu talimatları takip ederek Alex LGS Koçu'nu başarıyla deploy edebilirsiniz.
+Herhangi bir sorun yaşarsanız, troubleshooting bölümünü inceleyin.
+
+Son güncelleme: 29 Ağustos 2025
+Versiyon: 1.0.0
+
+BAŞARILAR! 🎯⚽💛💙
