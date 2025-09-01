@@ -1,0 +1,19 @@
+# Core dependencies
+streamlit>=1.49.0
+openai>=1.102.0
+pandas>=2.3.2
+plotly>=6.3.0
+requests>=2.32.5
+
+# Additional dependencies for enhanced functionality
+sqlite3
+typing-extensions>=4.10.0
+datetime
+tempfile
+base64
+json
+
+# Optional production enhancements
+gunicorn>=21.2.0
+python-dotenv>=1.0.0
+pydantic>=2.0.0

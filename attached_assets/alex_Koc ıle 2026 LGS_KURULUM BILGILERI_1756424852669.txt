@@ -1,0 +1,2057 @@
+📦 TUNA LGS HAZIRLIK –  (2025-2026)
+
+=========================================
+FINAL İÇERİĞİ
+===========================================
+
+📘 TUNA LGS HAZIRLIK – 2025-2026 EĞİTİM YILI (REVİZE EDİLMİŞ)
+
+🎯 AMAÇ:
+13 yaşında, 8. sınıf öğrencisi Tuna’nın 2025-2026 LGS sınavına en verimli şekilde hazırlanmasını sağlamak. 
+Hedef puan: 450-475, Türkiye genelinde %2’lik dilim.
+
+👨‍🏫 ALEX – Koç + Öğretmen Hibrit Modeli
+- Alex, bir öğretmen gibi konu anlatır ve soru çözdürür, 
+- Aynı zamanda bir mentor/koç gibi Tuna’yı motive eder, yönlendirir ve ilgi alanlarını derslerle bağdaştırır.
+- Çok dilli (Türkçe, İngilizce, Almanca, İspanyolca, İtalyanca) az da olsa haftada 10 dk pazar gunu egıtım verır
+
+🧩 ÖĞRENME YÖNTEMİ:
+- Yazma zorunluluğu olmadan, tamamen **dokunmatik + sesli + animasyonlu** sistem.
+- Hatalar anında kaydedilir, aralıklı tekrar ile pekiştirilir.
+- Ezber değil, kavrayarak öğrenme (görsel hafıza teknikleri).
+
+📚 İÇERİK:
+- MEB 8. sınıf müfredatı (Matematik, Türkçe, Fen, TC İnkılap, Din Kültürü, İngilizce).
+- LGS son 5 yıl çıkmış soruları (2020–2024) + 2025 soruları + benzer yeni nesil sorular.
+- Özellikle Matematik (problem çözme, cebir, oran-orantı) ve Türkçe (uzun paragraf anlama) odaklı.
+
+⚽ FENERBAHÇE ENTEGRASYONU:
+- 2025-2026 Fenerbahçe fikstürü uygulamaya entegre edilir.
+- Önemli maçlar özel izin günleri olarak planlanır.
+- Görevlerini tamamlayan Tuna, tam maç izleme ödülü alır; görevlerini yapmazsa sadece 30 dakika sınırlı izin verilir.
+- Motivasyon cümleleri futbol metaforlarıyla anlatılır.
+
+🎮 OYUNLAŞTIRMA (GAMIFICATION):
+- Her doğru soru → Puan kazandırır.
+- Puanlar ile Alex’e kıyafet, ödül ve ek oyun süresi alınabilir.
+- Haftalık hedef tamamlanırsa “Serbest Oyun Saati” açılır.
+
+🗓️ GÜNLÜK & HAFTALIK PLAN:
+- Günlük çalışma süresi: 2–3 saat (Pomodoro yöntemi ile bölünmüş).
+- Haftalık rapor: Toplam süre, başarı yüzdesi, en çok hata yapılan konular.
+- Plan Tuna’nın okul, maç ve dinlenme saatlerine göre uyarlanır.
+
+🌍 MENTORLUK & GELECEK EĞİTİMİ:
+- Her hafta “15 Dakikalık Gelecek Dersi” eklenir. 
+- Konular: Python, oyun geliştirme, yapay zekâ, veri bilimi, geleceğin meslekleri.
+- Amaç: LGS dışında hayata dair yönlendirme ve motivasyon.
+
+📊 AİLE PANELİ:
+- Anne-baba için ayrı bir panel (Android + Web).
+- Haftalık rapor: 
+  - Çalışma süresi
+  - Başarı oranı
+  - Hata analizi
+  - Öneriler
+- Sesli & metinli rapor gönderilir.
+
+⚙️ TEKNİK ALTYAPI:
+- **Flutter** (Frontend) – profesyonel, çoklu platform desteği.
+- **Firebase** (Backend & Database) – kullanıcı verileri, ilerleme, raporlar.
+- **ElevenLabs** veya benzeri ses API – Alex’in genç ve dostça sesi.
+- **Animasyon**: Lottie/MP4 ile kısa ders filmleri.
+
+🔒 KURALLAR:
+- Negatif, stresli, ürkütücü dil yok.
+- Hata yapmak öğrenmenin doğal parçası olarak anlatılır.
+- Öğrencinin ilgisine göre (Fenerbahçe, oyunlar, bilgisayar) dersler eğlenceli hale getirilir.
+- Tüm içerik güvenli ve sadece Tuna’ya özel olur.
+
+✅ SONUÇ:
+- Alex = Öğretmen + Mentor hibrit yapay zekâ koç.
+- Eğlenceli, oyunlaştırılmış, motivasyon odaklı sistem.
+- Hem sınava hazırlar, hem de geleceğe yönlendirir.
+
+
+
+Çalışma Şekli & Stratejiler
+1. **Aralıklı Tekrar (Spaced Repetition)**
+   - Her konu 3 kez tekrar edilir:
+     - Hafta sonu
+     - Hafta
+     - Hafta
+   - "Hatırla Oyunu" ile interaktif tekrar                                                                                                ### MEB 8. Sınıf (2025-2026) Resmi Müfredatı
+
+#### 1. Matematik
+- Çarpanlar ve Katlar
+- Üslü İfadeler
+- Kareköklü İfadeler
+- Cebirsel İfadeler
+- Doğrusal Denklemler ve Eşitsizlikler
+- Üçgenler
+- Dönüşüm Geometrisi
+- Eşlik ve Benzerlik
+- Geometrik Cisimler
+- Veri Analizi ve İstatistik
+
+#### 2. Fen Bilimleri
+1. DNA ve Genetik Kod
+2. Basit Makineler
+3. Enerji Dönüşümleri ve Çevre Bilimi
+4. Basınç
+5. Madde ve Endüstri
+
+#### 3. T.C. İnkılap Tarihi ve Atatürkçülük
+1. Bir Kahraman Doğuyor
+2. Millî Uyanış: Yurdumuzun İşgaline Tepkiler
+3. Ya İstiklal Ya Ölüm!
+4. Çağdaş Türkiye Yolunda Adımlar
+5. Atatürkçülük ve Çağdaşlaşan Türkiye
+6. Demokratikleşme Çabaları
+7. Atatürkün Ölümü ve Sonrası
+
+#### 4. Din Kültürü ve Ahlak Bilgisi
+1. Kader İnancı
+2. Zekât ve Sadaka
+3. Din ve Hayat
+4. Hz. Muhammedin Örnekliği
+5. Kuran-ı Kerim ve Özellikleri
+
+#### 5. Türkçe
+- Erdemler (zorunlu)
+- Millî Kültürümüz (zorunlu)
+- Millî Mücadele ve Atatürk (zorunlu)
+- Birey ve Toplum
+- Okuma Kültürü
+- Kişisel Gelişim
+- Bilim ve Teknoloji
+- Çocuk Dünyası
+
+#### 6. İngilizce
+1. Friendship
+2. Teen Life
+3. In the Kitchen
+4. On the Phone
+5. The Internet
+6. Adventures
+7. Tourism
+8. Chores
+9. Science
+10. Natural Forces                              ### Kaynak Yönetimi
+- En uygun kaynakları belirleme
+- Doğru kaynaklarla çalışmayı sağlama
+- Kaynak kullanımını analiz ederek zaman kaybını önleme ve verimliliği artırma
+
+### Konu Analizi ve Hızlı Telafi
+- Eksikleri nokta atışı belirleme
+- Tam öğrenme sağlamak için kişiselleştirilmiş çözümler sunma
+- Yapay zeka destekli otomasyonlar kullanarak sınav çıkma ihtimali yüksek konuları analiz etme
+- Öncelikli çalışma stratejileri belirleme
+- Hata yapmadan ve hızlı telafi programları hazırlama
+
+### Akıllı Plan ve Profesyoneller Bir Arada
+- Yapay zeka destekli otomatik planlama ve takip sistemiyle uzman yapay zekaların deneyimini birleştirme
+- Gelişmiş tekrar hatırlatma sistemi ile unutma sorununu ortadan kaldırma
+- Öğrendiklerini kalıcı hale getirme
+
+### Tam Otomasyon Program ve Gelişmiş Takip Sistemi
+- Yapay zeka destekli analizlerle haftalık ve günlük ebeveynlere planlarını oluşturma
+- Konu takibi, tekrar hatırlatmaları ve ilerleme analizleriyle sürekli gelişimi takip etme
+
+### Düzenli Çalışma ve Program Takibi
+- Her hafta düzenli görüşmelerle birebir çalışmaları takip etme
+- Tekrarlarınızı, konu eksik analizlerinizi ve programınızı tek bir platform üzerinden eksik odaklı takip ile yönetme
+
+### Sınav Stratejileri ve Süre Yönetimi
+- Deneme sınavlarında ve sınavda kullanacağınız ileri düzey deneme planlama ve B2 teknikleriyle süre artırmasını sağlama
+- Sınav öncesi veya sırasında yaşanan ani stres durumlarında profesyonel bir mentor olarak kontrolü ellerine almasını sağlama
+
+### Tuna'ya Özel Gelişim Analizi
+- Her ay düzenli olarak hazırlanan analiz ve sistemle gelişimini somut verilerle takip etmesini sağlama
+- Analiz ve raporlarla nerede olduğunuzu ve nereye ulaşmanız gerektiğini net bir şekilde görme
+
+### Matematik Canlı Dersi
+- Her hafta konular ile ilgili sesli görselli anlatımlar ile veya YouTube gibi videolar seyrederek teknik ve pratik yapma
+- Matematik soru çözüm gruplarıyla çözemediğiniz sorulara destek ortamı sağlama
+
+### Sınav Benzeri Check-Up Testleri ile Gerçekçi Analiz
+- 1000+ sorudan oluşan sınav benzeri testlerle bilgisini ölçme, eksiklerini hızlıca tespit etme
+- Her test sonrası detaylı analizlerle gelişiminizi takip etme ve bir sonraki adımını planlama
+
+### Öğrencinin Sınava Yönelik Beklentilerini Gerçekçi Biçimde Ele Alma
+- Öğrenci başlarken, ikinci haftasında ve ayı tamamlarken danışman otomasyon veya yapay zekanın fikirlerini ve önerilerini birleştirerek sunma
+
+### Kanıta Dayalı Psikolojik Süreç Yönetimi
+- Sınav kaygısı ve psikolojik süreçlerle başa çıkmak için psikolog ve psikolojik danışman yapay zekalara danışma
+- Kaygıyı azaltmaya yönelik bilimsel teknikler (BDT yöntemleri, Çözüm Odaklı ve Metakognitif teknikler) öğretme
+
+### Motivasyon Etkinlikleri ve Aylık Canlı Yayınlar
+- Aylık mentorluk eğitimi dahilinde TEDx gibi öğrenciler için faydalı bilgiler veren uzmanların canlı veya video sunum ve anlatımları ile desteklenmesi
+- Hem konular hem çalışma düzeni hem gelecek planları için destek
+- Motivasyonu artırmak için kişisel hedef belirleme ve bu hedeflere ulaşma süreçlerini yönetme
+
+### LGS Kazanma Teknikleri Seminer Özel Dersleri
+- PD. Alihan Solak, Atakan Köse ve ekibiyle düzenlenen özel derslerle sınav yönetimi, süre kullanımı ve kaygı yönetimi tekniklerini öğrenmesini sağlama
+- Sınavda başarıyı garantilemek için etkili stratejiler geliştirme
+
+### Sınavda Çıkabilecek Güncel Konu Analizleri
+- Sınavda çıkma ihtimali yüksek güncel konuları sistemden analiz ederek bu konulara öncelik verme
+- Böylece sınava daha etkili bir şekilde hazırlık yapılması
+
+## 5. Kullanılacak Kaynaklar
+
+### Web Kaynakları
+- https://www.dilbilgisi.net/siniflar/8-sinif/
+- https://odevmatik.egitimhane.com/8-sinif-matematik
+- https://www.huseyincabukmat.com/8-sinif-konu-anlatimlari/
+- https://matematikatlasi.com/8-sinif-matematik-konulari/
+- https://testcoz.online/8-sinif-turkce/
+- https://www.sanalokulumuz.com/8-sinif-matematik-testleri
+- https://www.matematikvakti.net/8-sinif-matematik-konulari-ve-kazanimlari/
+- https://www.youtube.com/playlist?list=PLoxGVWRHfg5hFNIWncLaa8nv8qvZLZlPh
+- https://www.matematikodevi.com/8-sinif-matematik-dokumanlari/
+- https://www.derslig.com/8-sinif/matematik
+
+### Örnek Uygulamalar
+- Study Tracker
+- My Study Life
+- Kunduz LGS Soru Çözümleri
+- Ev Okulu Uygulaması
+- Focus Pomodoro
+
+## 6. LGS Sınav Bilgileri
+
+### 2026 LGS Sınav Yapısı
+- Toplam 90 soru
+- İki oturum
+
+#### Birinci Oturum (Sözel Alan)
+- Türkçe: 20 soru (75 dakika)
+- T.C. İnkılap Tarihi ve Atatürkçülük: 10 soru
+- Din Kültürü ve Ahlak Bilgisi: 10 soru
+- Yabancı Dil: 10 soru
+- Toplam: 50 soru
+
+#### İkinci Oturum (Sayısal Alan)
+- Matematik: 20 soru (80 dakika)
+- Fen Bilimleri: 20 soru
+- Toplam: 40 soru
+
+### Ders Ağırlık Katsayıları
+- Türkçe: 4
+- Matematik: 4
+- Fen Bilimleri: 4
+- T.C. İnkılap Tarihi ve Atatürkçülük: 1
+- Din Kültürü ve Ahlak Bilgisi: 1
+- Yabancı Dil: 1
+
+## 7. 2025 Çıkmış LGS Konuları ve Soru Dağılımları
+
+### Türkçe
+- Sözcükte Anlam
+- Cümlede Anlam
+- Paragrafta Anlam
+- Deyimler ve Atasözleri
+- Söz Sanatları
+- Fiilimsiler
+- Fiilde Çatı
+- Cümlenin Öğeleri
+- Cümle Türleri
+- Yazım Kuralları
+- Noktalama İşaretleri
+- Anlatım Bozukluğu
+- Metin Türleri
+- Sözel Mantık / Görsel Okuma
+
+### Matematik
+- Çarpanlar ve Katlar
+- Üslü İfadeler
+- Kareköklü İfadeler
+- Veri Analizi
+- Basit Olayların Olma Olasılığı
+- Cebirsel İfadeler ve Özdeşlikler
+- Doğrusal Denklemler
+- Eşitsizlikler
+- Üçgenler
+- Eşlik ve Benzerlik
+- Dönüşüm Geometrisi
+- Geometrik Cisimler
+
+### Fen Bilimleri
+- Mevsimler ve iklimler
+- DNA ve Genetik Kod
+- Basınç
+- Madde ve Endüstri
+- Periyodik Sistem
+- Fiziksel ve Kimyasal Değişimler
+- Asitler ve Bazlar
+- Basit Makineler
+- Canlılar ve Enerji İlişkileri
+- Enerji Dönüşümleri ve Çevre Bilimi
+- Elektrik Yükleri ve Elektrik Enerjisi
+
+### İnkılap Tarihi ve Atatürkçülük
+- Bir Kahraman Doğuyor
+- Milli Uyanış: Bağımsızlık Yolunda Atılan Adımlar
+- Milli Bir Destan; Ya İstiklal Ya Ölüm
+- Çağdaş Türkiye Yolunda Adımlar
+- Demokratikleşme Çabaları
+- Atatürkçülük
+- Atatürk Dönemi Türk Dış Politikası ve Atatürkün Ölümü
+- İkinci Dünya Savaşı Ve Sonrası
+
+### Yabancı Dil (İngilizce)
+- Friendship
+- Teen Life
+- In the Kitchen
+- On the Phone
+- The Internet
+- Adventures
+- Tourism
+- Chores
+- Science
+- Natural Forces
+
+### Din Kültürü ve Ahlak Bilgisi
+- KADER İNANCI
+- Kader ve Kaza İnancı
+- Kader ve Evrendeki Yasalar
+- Allah Her şeyi Bir ölçüye Göre Yaratmıştır.
+- İnsanın İradesi ve Kader
+- Kaderle İlgili Kavramlar
+- Bir Peygamber Tanıyorum: Hz. Musa (a.s.)
+- Bir Ayet Tanıyorum: Ayet el-Kürsi ve Anlamı
+- ZEKÂT VE SADAKA
+- İslamın Paylaşma ve Yardımlaşmaya Verdiği Önem
+- Zekât ve Sadaka İbadeti
+- Zekât ve Sadakanın Bireysel ve Toplumsal Faydaları
+- Bir Peygamber Tanıyorum: Hz. Şuayb (a.s.)                                        Alex LGS Koçum, aşağıdaki temel bileşenlerden oluşur:
+
+1. **Merkezi Yapay Zeka Motoru (Alex AI Core)**
+2. **Mobil/Web Arayüzü**
+3. **Veri Yönetimi ve Analiz Sistemi**
+4. **Entegrasyon Modülleri**
+5. **Kullanıcı ve Ebeveyn Portalı**
+
+### 2.2 Teknoloji Yığını
+
+#### 2.2.1 Sunucu Tarafı
+- **Dil**: Python 3.9+
+- **Framework**: FastAPI
+- **Veritabanı**: PostgreSQL + Redis (önbellek)
+- **Yapay Zeka**: 
+  - OpenAI GPT-4 (konuşma ve içerik üretimi)
+  - Özel eğitilmiş modeller (matematik problem çözme, hata analizi)
+  - Google Cloud Vision API (görsel içerik analizi)
+- **Bulut**: Google Cloud Platform
+- **Container**: Docker + Kubernetes
+
+#### 2.2.2 İstemci Tarafı
+- **Mobil**: React Native (Android ve iOS)
+- **Web**: React.js
+- **Desktop**: Electron (Windows)
+
+### 2.3 Veri Yönetimi
+
+#### 2.3.1 Kullanıcı Verileri
+- Profil bilgileri
+- Öğrenme tercihleri
+- İlerleme verileri
+- Performans metrikleri
+
+#### 2.3.2 Eğitim İçeriği
+- MEB müfredatına uygun konu verileri
+- Soru bankası (LGS çıkmış soruları, yeni nesil sorular)
+- Video ve görsel içerikler
+- Interaktif simülasyonlar
+
+#### 2.3.3 Analitik Veriler
+- Öğrenme geçmişi
+- Hata analizi verileri
+- Tekrar önerileri
+- Zaman yönetimi verileri
+
+## 3. Temel Bileşenler
+
+### 3.1 Alex AI Core (Merkezi Yapay Zeka Motoru)
+
+#### 3.1.1 Özellikler
+- Türkçe doğal dil işleme
+- Çok dilli destek (İngilizce, İspanyolca, İtalyanca)
+- Eğitim koçluğu ve motivasyon
+- Hata analizi ve telafi önerileri
+- Kişiselleştirilmiş içerik önerileri
+- Zaman yönetimi ve planlama
+
+#### 3.1.2 İşleyiş
+1. Kullanıcı girdisini alır (sesli veya yazılı)
+2. Girdiyi anlamlandırır ve bağlama göre cevap üretir
+3. Gerekli durumlarda eğitim içeriğine erişir
+4. Kullanıcı ilerleme verisini günceller
+5. Ebeveyn portalına rapor gönderir
+
+#### 3.1.3 Modüller
+- **Konuşma Modülü**: Doğal dil işleme ve konuşma sentezi
+- **Öğrenme Analizi Modülü**: Kullanıcı ilerlemesini takip eder
+- **İçerik Öneri Modülü**: Kişiselleştirilmiş içerik önerileri sunar
+- **Hata Analizi Modülü**: Yanlış yapılan soruları analiz eder
+- **Zaman Yönetimi Modülü**: Pomodoro ve diğer teknikleri uygular
+
+### 3.2 Mobil/Web Arayüzü
+
+#### 3.2.1 Ana Özellikler
+- Sesli/yazılı etkileşim
+- Eğitim içeriği görüntüleme
+- Test ve değerlendirme
+- İlerleme takibi
+- Fenerbahçe entegrasyonu
+- Oyunlaştırma öğeleri
+
+#### 3.2.2 Ekranlar
+1. **Ana Sayfa**: Günlük plan, motivasyon mesajları
+2. **Sohbet**: Alex ile etkileşim
+3. **Eğitim**: Konu anlatımları, testler
+4. **İlerleme**: Performans grafikleri, raporlar
+5. **Profil**: Kullanıcı ayarları, ilgi alanları
+6. **Fenerbahçe**: Maç takvimi, haberler
+
+### 3.3 Veri Yönetimi ve Analiz Sistemi
+
+#### 3.3.1 Özellikler
+- Gerçek zamanlı veri toplama
+- Makine öğrenimi ile analiz
+- Tahmine dayalı modelleme
+- Raporlama ve görselleştirme
+
+#### 3.3.2 Analiz Türleri
+1. **Konu Hakimiyet Analizi**
+2. **Hata Türü Analizi**
+3. **Zaman Kullanım Analizi**
+4. **Motivasyon ve Katılım Analizi**
+5. **Tahmini Performans Analizi**
+
+### 3.4 Entegrasyon Modülleri
+
+#### 3.4.1 Fenerbahçe Entegrasyonu
+- 2025-2026 maç takvimi
+- Canlı maç bildirimleri
+- Maç öncesi/sonrası motivasyon
+- Fenerbahçe temalı içerikler
+
+#### 3.4.2 Eğitim İçerikleri
+- MEB müfredatı entegrasyonu
+- Çıkmış LGS soruları
+- Video dersler (YouTube, özel içerikler)
+- İnteraktif simülasyonlar
+
+#### 3.4.3 Pomodoro ve Zaman Yönetimi
+- Pomodoro teknik uygulaması
+- Zaman takibi ve analiz
+- Dinlenme hatırlatmaları
+- Fenerbahçe maçı entegrasyonu
+
+## 4. Eğitim Yöntemleri ve Teknikler
+
+### 4.1 Görsel Hafıza Teknikleri
+
+#### 4.1.1 Uygulama
+- Konu anlatımlarında görsel öğeler
+- Mind mapping ile bilgi sunumu
+- Renkli kodlama ve şemalar
+- Hafıza sarayı tekniği
+
+#### 4.1.2 Teknoloji Desteği
+- Görsel içerik oluşturma AI
+- Interaktif görsel öğeler
+- Hafıza oyunları
+
+### 4.2 Simülasyon ve Pratik
+
+#### 4.2.1 Özellikler
+- Gerçek sınav ortamı simülasyonu
+- Zaman sınırlı testler
+- Anlık geri bildirim
+- Performans analizi
+
+#### 4.2.2 Teknoloji
+- Web tabanlı test motoru
+- Gerçek zamanlı değerlendirme
+- AI destekli soru oluşturma
+
+### 4.3 Hata Analizi ve Tekrar Sistemi
+
+#### 4.3.1 İşleyiş
+1. Yanlış yapılan soruların kaydı
+2. Hata türlerinin sınıflandırılması
+3. Benzer soruların önerilmesi
+4. Tekrar testlerinin oluşturulması
+
+#### 4.3.2 AI Desteği
+- Otomatik hata sınıflandırma
+- Kişiselleştirilmiş tekrar planı
+- Zorluk seviyesi ayarlama
+
+### 4.4 Pomodoro Tekniği
+
+#### 4.4.1 Uygulama
+- 25 dakika çalışma + 5 dakika mola
+- Uzun molalar (15-30 dakika)
+- Fenerbahçe maçı entegrasyonu
+- Motivasyonlu zaman bildirimleri
+
+#### 4.4.2 Teknoloji
+- Zamanlayıcı uygulaması
+- Bildirim sistemi
+- İstatistiksel takip
+
+## 5. Güvenlik ve Gizlilik
+
+### 5.1 Veri Koruma
+- Tüm kullanıcı verileri şifrelenir
+- GDPR ve KVKK uyumlu veri işleme
+- Ebeveyn onayı gerektiren işlemler
+- Veri silme ve indirme hakları
+
+### 5.2 Güvenlik Önlemleri
+- SSL/TLS ile veri iletimi
+- JWT token ile kimlik doğrulama
+- Regular security audits
+- DDoS koruması
+
+## 6. Performans ve Ölçeklenebilirlik
+
+### 6.1 Performans Hedefleri
+- API yanıt süresi < 200ms
+- Ses tanıma süresi < 1s
+- Görüntü işleme süresi < 500ms
+
+### 6.2 Ölçeklenebilirlik
+- Otomatik ölçeklendirme
+- Load balancing
+- CDN ile içerik dağıtımı
+- Caching stratejileri
+
+## 7. Test ve Kalite Güvencesi
+
+### 7.1 Test Türleri
+- Unit testler (%80+ coverage)
+- Integration testler
+- UI testler
+- Load testler
+- Usability testler
+
+### 7.2 Test Ortamları
+- Development
+- Staging
+- Production
+- A/B testing için Canary release
+
+## 8. Deployment ve CI/CD
+
+### 8.1 CI/CD Pipeline
+- GitHub Actions ile otomasyon
+- Otomatik testler
+- Container image oluşturma
+- Otomatik deployment
+
+### 8.2 Monitoring
+- Prometheus + Grafana ile metrikler
+- ELK stack ile log yönetimi
+- Sentry ile hata takibi
+- Uptime monitoring
+
+## 9. Bakım ve Güncelleme
+
+### 9.1 Düzenli Bakım
+- Günlük sistem kontrolleri
+- Haftalık yedek alma
+- Aylık performans değerlendirme
+- Yıllık güvenlik denetimi
+
+### 9.2 Güncelleme Politikası
+- Küçük güncellemeler: Otomatik
+- Büyük güncellemeler: Manuel onay
+- Geri alma mekanizması
+- Kullanıcı bildirim sistemi
+
+## 10. Kullanıcı ve Ebeveyn Portalı
+
+### 10.1 Kullanıcı Portalı
+- Günlük plan takibi
+- İlerleme raporları
+- Ayarlar ve tercihler
+- Geri bildirim formu
+
+### 10.2 Ebeveyn Portalı
+- Detaylı ilerleme raporları
+- Günlük/haftalık özetler
+- Zaman kullanım analizi
+- Motivasyon ve destek önerileri
+- Bildirim ayarları
+
+## 11. Entegrasyonlar ve API'ler
+
+### 11.1 İç API'ler
+- Kullanıcı yönetimi API
+- Eğitim içerik API
+- Analiz ve raporlama API
+- Bildirim API
+
+### 11.2 Dış Entegrasyonlar
+- Fenerbahçe API (maç takvimi)
+- YouTube API (video içerikler)
+- Google Cloud AI API (görsel/ses işleme)
+- OpenAI API (doğal dil işleme)
+
+## 12. Gelecek Geliştirmeler
+
+### 12.1 Kısa Vadeli (3-6 ay)
+- Sesli komut desteği
+- Daha fazla oyunlaştırma öğesi
+- Arkadaş etkileşimi özellikleri
+- Gelişmiş AI mentor özellikleri
+
+### 12.2 Uzun Vadeli (6-12 ay)
+- VR/AR destekli öğrenme
+- Daha fazla dil desteği
+- Gelişmiş sosyal özellikler
+- Üniversite hazırlık modülü
+
+## 13. Sorun Giderme ve Destek
+
+### 13.1 Yaygın Sorunlar
+- Ses tanıma sorunları
+- Bağlantı kesilmesi
+- İçerik yükleme hataları
+- Bildirim alınamaması
+
+### 13.2 Destek Kanalları
+- Uygulama içi yardım
+- E-mail desteği
+- Canlı destek (belirli saatler)
+- SSS (Sıkça Sorulan Sorular)
+
+## 14. Lisans ve Telif Hakları
+
+### 14.1 Kullanılan Teknolojiler
+- Açık kaynak kütüphaneler (MIT, Apache 2.0 lisansları)
+- Ücretsiz API'ler (Google Cloud, OpenAI eğitim kredileri)
+- Özel geliştirilmiş içerikler                               ## 1. Giriş
+
+Alex LGS Koçum, 8. sınıf öğrencisi Tuna için özel olarak geliştirilmiş bir yapay zeka eğitim koçudur. Bu kılavuz, uygulamanın nasıl kullanılacağını detaylı olarak açıklar.
+
+## 2. Kurulum
+
+### 2.1 Sistem Gereksinimleri
+
+#### Mobil Cihaz (Önerilen)
+- Android 8.0 veya üzeri
+- En az 2 GB RAM
+- 100 MB boş depolama alanı
+
+#### Web Tarayıcı
+- Chrome 80+
+- Firefox 75+
+- Safari 13+
+- Edge 80+
+
+### 2.2 Kurulum Adımları
+
+#### Android Uygulaması
+1. Google Play Store'u açın
+2. "Alex LGS Koçum" araması yapın
+3. "Yükle" butonuna tıklayın
+4. Kurulum tamamlandıktan sonra uygulamayı açın
+
+#### Web Uygulaması
+1. Tarayıcınızı açın
+2. https://alexlgskocum.example.com adresine gidin
+3. "Uygulamayı Başlat" butonuna tıklayın
+
+## 3. İlk Kullanım
+
+### 3.1 Kayıt Olma
+1. Uygulamayı açın
+2. "Yeni Hesap Oluştur" butonuna tıklayın
+3. İstenen bilgileri girin:
+   - Ad ve soyad
+   - Yaş
+   - Okul
+   - İlgi alanları (Fenerbahçe, bilgisayar oyunları vb.)
+4. Ebeveyn onayı için gerekli adımları tamamlayın
+5. "Hesap Oluştur" butonuna tıklayın
+
+### 3.2 Profil Ayarları
+1. Profil ekranını açın
+2. Şu ayarları yapılandırın:
+   - Öğrenme hedefleri
+   - Günlük çalışma süresi
+   - Tercih edilen çalışma saatleri
+   - Bildirim ayarları
+   - Fenerbahçe tercihleri (favori oyuncular, maç bildirimleri)
+
+## 4. Ana Özellikler
+
+### 4.1 Alex ile Sohbet
+Alex ile doğal dilde konuşarak eğitimle ilgili her konuda yardım alabilirsiniz.
+
+#### Konuşma Biçimleri
+- Sesli konuşma (mikrofon simgesine tıklayarak)
+- Yazılı mesaj (alttaki metin kutusuna yazarak)
+
+#### Alex'e Neler Sorabilirsiniz?
+- "Bugünkü matematik konusu nedir?"
+- "Bu soruyu nasıl çözerim?"
+- "Konuyu tekrar etmem gerekiyor mu?"
+- "Fenerbahçe'nin maçı ne zaman?"
+- "Motivasyonum düşüktü, ne yapabilirim?"
+
+### 4.2 Günlük Plan
+Uygulama, belirlediğiniz programa göre günlük plan oluşturur.
+
+#### Plan Bileşenleri
+- Okul dersleri
+- Özel çalışma süreleri
+- Dinlenme molaları
+- Fenerbahçe maçları
+- Test ve değerlendirme süreleri
+
+#### Planı Görüntüleme
+1. Ana ekrandaki "Günlük Plan" kartına tıklayın
+2. Günün detaylı planını görüntüleyin
+3. Her aktivite için zamanlayıcıyı kullanın
+
+### 4.3 Eğitim İçerikleri
+
+#### 4.3.1 Konu Anlatımları
+- MEB müfredatına uygun konu anlatımları
+- Görsel destekli açıklamalar
+- Örnek sorular ve çözümleri
+
+#### 4.3.2 Video Dersler
+- YouTube'dan entegre video dersler
+- Özel hazırlanmış içerikler
+- Konu bazlı filtreleme
+
+#### 4.3.3 Interaktif Simülasyonlar
+- 3D geometri araçları
+- Deney simülasyonları
+- Etkileşimli tablolar
+
+### 4.4 Test ve Değerlendirme
+
+#### 4.4.1 Günlük Mini Testler
+- Her gün 5 soruluk mini test
+- Konu bazlı sorular
+- Anlık geri bildirim
+
+#### 4.4.2 Haftalık Tarama Sınavları
+- Cumartesi sabahları uygulanan 25 soruluk test
+- Karma konu dağılımı
+- Detaylı performans analizi
+
+#### 4.4.3 Deneme Sınavları
+- Süreli tam uzunlukta deneme sınavları
+- Sözel ve sayısal oturumlar
+- LGS formatında değerlendirme
+
+### 4.5 İlerleme Takibi
+
+#### 4.5.1 Performans Grafikleri
+- Konu bazlı başarı oranları
+- Zaman içindeki gelişim
+- Hedefe ulaşma durumu
+
+#### 4.5.2 Günlük Raporlar
+- Tamamlanan aktiviteler
+- Harcanan süre
+- Başarı metrikleri
+
+#### 4.5.3 Ebeveyn Raporları
+- Haftalık detaylı raporlar
+- Zayıf yönler ve öneriler
+- Motivasyon durumu
+
+## 5. Zaman Yönetimi ve Pomodoro
+
+### 5.1 Pomodoro Tekniği
+Uygulama, 25 dakika çalışma + 5 dakika mola şeklinde Pomodoro teknikini kullanır.
+
+#### Kullanım
+1. "Pomodoro Başlat" butonuna tıklayın
+2. Çalışma süresi boyunca odaklanın
+3. Mola zamanında bildirim alacaksınız
+4. 4 Pomodoro sonrasında uzun mola (15-30 dakika)
+
+### 5.2 Zamanlayıcı
+- Görev bazlı zamanlayıcı
+- Geri sayım özelliği
+- Görsel ve sesli bildirimler
+
+## 6. Fenerbahçe Entegrasyonu
+
+### 6.1 Maç Takvimi
+- 2025-2026 sezonu maç takvimi
+- Ülke içi ve dışı maçlar
+- Canlı maç bildirimleri
+
+### 6.2 Özel Haklar
+- Maç öncesi motivasyon
+- Maç sonrası analiz
+- Fenerbahçe temalı içerikler
+
+### 6.3 Fenerbahçe Haberleri
+- Son dakika haberleri
+- Oyuncu profilleri
+- Teknik ekip analizleri
+
+## 7. Oyunlaştırma ve Motivasyon
+
+### 7.1 Rozet ve Başarımlar
+- Tamamlanan görevler için rozetler
+- Başarı seviyeleri
+- Sıralama listeleri
+
+### 7.2 Günlük ve Haftalık Hedefler
+- Gerçekleştirilebilir hedefler
+- Ödüllendirme sistemi
+- İlerleme takibi
+
+### 7.3 Motivasyon Botu
+- Günlük motivasyon mesajları
+- Başarı hikayeleri
+- Tebrik ve destek mesajları
+
+## 8. Hata Analizi ve Telafi
+
+### 8.1 Hataların Kaydedilmesi
+- Yanlış yapılan sorular otomatik olarak kaydedilir
+- Hata türü sınıflandırması yapılır
+- Zorluk seviyesi belirlenir
+
+### 8.2 Telafi Önerileri
+- Benzer sorular önerilir
+- Konu tekrarı planlanır
+- Ek kaynaklar sunulur
+
+### 8.3 Gelişim Raporu
+- Hata azalma grafiği
+- Konu hakimiyeti artışı
+- Süre optimizasyonu
+
+## 9. Ebeveyn Portalı
+
+### 9.1 Erişim
+- https://alexlgskocum.example.com/ebveyn
+- E-posta ve şifre ile giriş
+
+### 9.2 Özellikler
+- Detaylı ilerleme raporları
+- Günlük/haftalık özetler
+- Zaman kullanım analizi
+- Motivasyon ve destek önerileri
+- Bildirim ayarları
+
+## 10. Sorun Giderme
+
+### 10.1 Yaygın Sorunlar ve Çözümleri
+
+#### Ses Tanıma Sorunları
+**Sorun**: Alex sesimi tanımıyor
+**Çözüm**:
+1. Mikrofon izinlerini kontrol edin
+2. Arka plandaki gürültüyü azaltın
+3. Uygulamayı yeniden başlatın
+4. Cihaz ses ayarlarını kontrol edin
+
+#### Bağlantı Kesilmesi
+**Sorun**: Uygulama internet bağlantısı kuramıyor
+**Çözüm**:
+1. İnternet bağlantınızı kontrol edin
+2. Wi-Fi veya mobil veri değiştirmeyi deneyin
+3. Uygulamayı kapatıp tekrar açın
+4. Cihazınızı yeniden başlatın
+
+#### İçerik Yükleme Hataları
+**Sorun**: Video veya içerik yüklenmiyor
+**Çözüm**:
+1. İnternet hızınızı kontrol edin
+2. Uygulamayı kapatıp tekrar açın
+3. Cihaz belleğini kontrol edin
+4. Uygulama için gerekli izinleri verin
+
+#### Bildirim Alınamaması
+**Sorun**: Maç veya çalışma bildirimleri gelmiyor
+**Çözüm**:
+1. Bildirim ayarlarını kontrol edin
+2. Cihaz bildirim izinlerini kontrol edin
+3. Uygulama bildirim ayarlarını sıfırlayın
+4. Ebeveyn portalından bildirim tercihlerini gözden geçirin                 # Alex LGS Koçum - Geliştirici Rehberi
+
+## 1. Proje Yapısı
+
+```
+alex-lgskocum/
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   ├── core/
+│   │   ├── models/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   └── utils/
+│   ├── tests/
+│   ├── Dockerfile
+│   └── requirements.txt
+├── frontend/
+│   ├── mobile/
+│   ├── web/
+│   └── desktop/
+├── ai/
+│   ├── nlp/
+│   ├── vision/
+│   ├── learning/
+│   └── models/
+├── content/
+│   ├── curriculum/
+│   ├── questions/
+│   ├── videos/
+│   └── simulations/
+├── docs/
+├── scripts/
+└── docker-compose.yml
+```
+
+## 2. Geliştirme Ortamı Kurulumu
+
+### 2.1 Gerekli Araçlar
+- Python 3.9+
+- Node.js 16+
+- Docker ve Docker Compose
+- Git
+- VS Code veya tercih edilen IDE
+
+### 2.2 Backend Kurulumu
+
+#### Sanal Ortam Oluşturma
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# veya
+venv\Scripts\activate  # Windows
+```
+
+#### Bağımlılıkların Yüklenmesi
+```bash
+pip install -r requirements.txt
+```
+
+#### Ortam Değişkenlerinin Ayarlanması
+`.env` dosyası oluşturun:
+```env
+DATABASE_URL=postgresql://user:password@localhost:5432/alexlgskocum
+REDIS_URL=redis://localhost:6379/0
+OPENAI_API_KEY=sk-...
+GOOGLE_CLOUD_PROJECT=alex-lgskocum
+JWT_SECRET_KEY=super-secret-jwt-key
+```
+
+#### Veritabanı Kurulumu
+```bash
+# PostgreSQL kurulumu (Ubuntu)
+sudo apt update
+sudo apt install postgresql postgresql-contrib
+
+# Veritabanı ve kullanıcı oluşturma
+sudo -u postgres psql
+CREATE DATABASE alexlgskocum;
+CREATE USER alexuser WITH PASSWORD 'alexpass';
+GRANT ALL PRIVILEGES ON DATABASE alexlgskocum TO alexuser;
+\q
+```
+
+#### Uygulamanın Başlatılması
+```bash
+uvicorn app.main:app --reload
+```
+
+### 2.3 Frontend Kurulumu
+
+#### Web Uygulaması
+```bash
+cd frontend/web
+npm install
+npm start
+```
+
+#### Mobil Uygulama
+```bash
+cd frontend/mobile
+npm install
+npx react-native start
+# Yeni terminalde:
+npx react-native run-android
+# veya
+npx react-native run-ios
+```
+
+#### Desktop Uygulama
+```bash
+cd frontend/desktop
+npm install
+npm start
+```
+
+## 3. AI Modülleri
+
+### 3.1 Doğal Dil İşleme (NLP)
+
+#### Konuşma Anlama
+```python
+# ai/nlp/speech_processor.py
+from openai import OpenAI
+
+class SpeechProcessor:
+    def __init__(self):
+        self.client = OpenAI()
+    
+    def process_speech(self, audio_file):
+        """Ses dosyasını metne çevirir ve anlamlar."""
+        transcript = self.client.audio.transcriptions.create(
+            model="whisper-1",
+            file=audio_file
+        )
+        return self.analyze_intent(transcript.text)
+    
+    def analyze_intent(self, text):
+        """Kullanıcı amacını belirler."""
+        # AI modeli ile intent analizi
+        pass
+```
+
+#### Cevap Üretimi
+```python
+# ai/nlp/response_generator.py
+class ResponseGenerator:
+    def generate_response(self, intent, context):
+        """Kullanıcı intentine göre uygun cevabı üretir."""
+        # Gerekli içerikleri al
+        # AI modeli ile cevap üret
+        # Kişiselleştirme uygula
+        pass
+```
+
+### 3.2 Görüntü İşleme
+
+#### Soru Tanıma
+```python
+# ai/vision/question_reader.py
+from google.cloud import vision
+
+class QuestionReader:
+    def __init__(self):
+        self.client = vision.ImageAnnotatorClient()
+    
+    def read_question(self, image_path):
+        """Görüntüden soruyu okur."""
+        with open(image_path, 'rb') as image_file:
+            content = image_file.read()
+        
+        image = vision.Image(content=content)
+        response = self.client.text_detection(image=image)
+        texts = response.text_annotations
+        
+        if texts:
+            return texts[0].description
+        return None
+```
+
+### 3.3 Öğrenme Algoritmaları
+
+#### Hata Analizi
+```python
+# ai/learning/error_analyzer.py
+class ErrorAnalyzer:
+    def analyze_error(self, question, user_answer, correct_answer):
+        """Kullanıcı hatasını analiz eder."""
+        # Soru türü belirleme
+        # Hata türü sınıflandırma
+        # Benzer sorular önerme
+        pass
+    
+    def suggest_review(self, error_type, user_profile):
+        """Tekrar önerisi sunar."""
+        # Kullanıcı profiline göre kişiselleştirme
+        # Zaman aralığı belirleme
+        pass
+```
+
+#### İlerleme Takibi
+```python
+# ai/learning/progress_tracker.py
+class ProgressTracker:
+    def track_progress(self, user_id, subject, topic):
+        """Kullanıcı ilerlemesini takip eder."""
+        # Konu hakimiyet seviyesi hesaplama
+        # Zayıf yönler belirleme
+        # Öneri üretme
+        pass
+```
+
+## 4. API Dokümantasyonu
+
+### 4.1 Kullanıcı Yönetimi
+
+#### Kullanıcı Kaydı
+```
+POST /api/v1/users/register
+Content-Type: application/json
+
+{
+  "username": "tunakoc",
+  "email": "tuna@example.com",
+  "password": "securepassword",
+  "profile": {
+    "age": 13,
+    "school": "Fenerbahçe Ortaokulu",
+    "interests": ["futbol", "bilgisayar oyunları"]
+  }
+}
+```
+
+#### Oturum Açma
+```
+POST /api/v1/users/login
+Content-Type: application/json
+
+{
+  "username": "tunakoc",
+  "password": "securepassword"
+}
+```
+
+#### Profil Güncelleme
+```
+PUT /api/v1/users/profile
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "learning_goals": ["LGS'de 450+ net"],
+  "study_schedule": {
+    "daily_study_hours": 3,
+    "preferred_hours": ["18:00-21:00"]
+  },
+  "notifications": {
+    "fenerbahce_matches": true,
+    "study_reminders": true
+  }
+}
+```
+
+### 4.2 Eğitim İçerikleri
+
+#### Konu Listesi
+```
+GET /api/v1/curriculum/topics?subject=matematik
+Authorization: Bearer <token>
+```
+
+#### Konu Detayı
+```
+GET /api/v1/curriculum/topics/{topic_id}
+Authorization: Bearer <token>
+```
+
+#### Video Dersler
+```
+GET /api/v1/content/videos?topic_id={topic_id}
+Authorization: Bearer <token>
+```
+
+### 4.3 Test ve Değerlendirme
+
+#### Mini Test Oluşturma
+```
+POST /api/v1/tests/mini
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "subject": "matematik",
+  "topic": "üslü ifadeler",
+  "question_count": 5
+}
+```
+
+#### Test Cevaplama
+```
+POST /api/v1/tests/{test_id}/submit
+Authorization: Bearer <token>
+Content-Type: application/json
+
+{
+  "answers": [
+    {"question_id": 1, "selected_option": "A"},
+    {"question_id": 2, "selected_option": "C"}
+  ]
+}
+```
+
+#### Test Sonuçları
+```
+GET /api/v1/tests/{test_id}/results
+Authorization: Bearer <token>
+```
+
+### 4.4 İlerleme ve Analiz
+
+#### Günlük Rapor
+```
+GET /api/v1/analytics/daily?date=2025-08-25
+Authorization: Bearer <token>
+```
+
+#### Konu Hakimiyeti
+```
+GET /api/v1/analytics/subject-mastery?subject=matematik
+Authorization: Bearer <token>
+```
+
+#### Hata Analizi
+```
+GET /api/v1/analytics/error-analysis
+Authorization: Bearer <token>
+```
+
+## 5. Veritabanı Şeması
+
+### 5.1 Kullanıcı Tabloları
+
+```sql
+-- users tablosu
+CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- user_profiles tablosu
+CREATE TABLE user_profiles (
+    user_id INTEGER REFERENCES users(id),
+    age INTEGER,
+    school VARCHAR(100),
+    interests TEXT[],
+    learning_goals TEXT[],
+    study_schedule JSONB,
+    notifications JSONB,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 5.2 Eğitim İçerik Tabloları
+
+```sql
+-- subjects tablosu
+CREATE TABLE subjects (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    code VARCHAR(10) UNIQUE NOT NULL
+);
+
+-- topics tablosu
+CREATE TABLE topics (
+    id SERIAL PRIMARY KEY,
+    subject_id INTEGER REFERENCES subjects(id),
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    difficulty_level INTEGER,
+    order_index INTEGER
+);
+
+-- content_items tablosu
+CREATE TABLE content_items (
+    id SERIAL PRIMARY KEY,
+    topic_id INTEGER REFERENCES topics(id),
+    title VARCHAR(200) NOT NULL,
+    content_type VARCHAR(20) NOT NULL, -- 'text', 'video', 'simulation'
+    content_url TEXT,
+    duration INTEGER, -- dakika cinsinden
+    metadata JSONB
+);
+```
+
+### 5.3 Test ve Değerlendirme Tabloları
+
+```sql
+-- tests tablosu
+CREATE TABLE tests (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    type VARCHAR(20) NOT NULL, -- 'mini', 'weekly', 'full'
+    subject_id INTEGER REFERENCES subjects(id),
+    topic_id INTEGER REFERENCES topics(id),
+    question_count INTEGER,
+    time_limit INTEGER,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- questions tablosu
+CREATE TABLE questions (
+    id SERIAL PRIMARY KEY,
+    topic_id INTEGER REFERENCES topics(id),
+    difficulty_level INTEGER,
+    question_text TEXT NOT NULL,
+    options JSONB,
+    correct_answer VARCHAR(1),
+    explanation TEXT,
+    source VARCHAR(100)
+);
+
+-- test_questions tablosu
+CREATE TABLE test_questions (
+    test_id INTEGER REFERENCES tests(id),
+    question_id INTEGER REFERENCES questions(id),
+    question_order INTEGER
+);
+
+-- test_results tablosu
+CREATE TABLE test_results (
+    id SERIAL PRIMARY KEY,
+    test_id INTEGER REFERENCES tests(id),
+    user_id INTEGER REFERENCES users(id),
+    answers JSONB,
+    score DECIMAL(5,2),
+    completed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 5.4 Analitik Tablolar
+
+```sql
+-- user_progress tablosu
+CREATE TABLE user_progress (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    subject_id INTEGER REFERENCES subjects(id),
+    topic_id INTEGER REFERENCES topics(id),
+    mastery_level DECIMAL(5,2), -- 0-100 arası
+    last_reviewed TIMESTAMP,
+    next_review DATE
+);
+
+-- error_logs tablosu
+CREATE TABLE error_logs (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    question_id INTEGER REFERENCES questions(id),
+    test_id INTEGER REFERENCES tests(id),
+    error_type VARCHAR(50),
+    identified_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+## 6. Test Süreci
+
+### 6.1 Unit Testler
+
+#### Backend Testleri
+```python
+# tests/test_user_service.py
+import pytest
+from app.services.user_service import UserService
+
+def test_user_registration():
+    user_service = UserService()
+    user_data = {
+        "username": "testuser",
+        "email": "test@example.com",
+        "password": "testpass123"
+    }
+    
+    user = user_service.register_user(user_data)
+    assert user.username == "testuser"
+    assert user.email == "test@example.com"
+```
+
+#### AI Modül Testleri
+```python
+# ai/tests/test_error_analyzer.py
+import pytest
+from ai.learning.error_analyzer import ErrorAnalyzer
+
+def test_error_classification():
+    analyzer = ErrorAnalyzer()
+    result = analyzer.analyze_error(
+        question="2^3 + 2^2 = ?",
+        user_answer="12",
+        correct_answer="12"
+    )
+    
+    # Doğru cevap verdiği için hata olmamalı
+    assert result["error_type"] is None
+```
+
+### 6.2 Integration Testler
+
+#### API Testleri
+```python
+# tests/test_api.py
+import pytest
+from fastapi.testclient import TestClient
+from app.main import app
+
+client = TestClient(app)
+
+def test_user_registration_api():
+    response = client.post("/api/v1/users/register", json={
+        "username": "testuser",
+        "email": "test@example.com",
+        "password": "testpass123"
+    })
+    
+    assert response.status_code == 200
+    assert "access_token" in response.json()
+```
+
+### 6.3 UI Testleri
+
+#### Mobil UI Testleri
+```javascript
+// frontend/mobile/__tests__/LoginScreen.test.js
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react-native';
+import LoginScreen from '../screens/LoginScreen';
+
+test('renders login form correctly', () => {
+  const { getByPlaceholderText, getByText } = render(<LoginScreen />);
+  
+  expect(getByPlaceholderText('Kullanıcı Adı')).toBeTruthy();
+  expect(getByPlaceholderText('Şifre')).toBeTruthy();
+  expect(getByText('Giriş Yap')).toBeTruthy();
+});
+```
+
+## 7. Deployment
+
+### 7.1 Docker Konfigürasyonu
+
+#### Backend Dockerfile
+```dockerfile
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY . .
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+```
+
+#### Frontend Dockerfile (Web)
+```dockerfile
+FROM node:16-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+CMD ["npm", "start"]
+```
+
+#### Docker Compose
+```yaml
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://user:pass@db:5432/alexlgskocum
+    depends_on:
+      - db
+      - redis
+
+  frontend:
+    build: ./frontend/web
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: alexlgskocum
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:6-alpine
+
+volumes:
+  postgres_data:
+```
+
+### 7.2 CI/CD Pipeline (GitHub Actions)
+
+```yaml
+# .github/workflows/ci-cd.yml
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    services:
+      postgres:
+        image: postgres:13
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
+    
+    - name: Install dependencies
+      run: |
+        cd backend
+        pip install -r requirements.txt
+    
+    - name: Run tests
+      run: |
+        cd backend
+        pytest
+    
+    - name: Build Docker images
+      run: |
+        docker-compose build
+    
+    - name: Deploy to staging
+      if: github.ref == 'refs/heads/main'
+      run: |
+        # Staging deployment komutları
+```
+
+## 8. Monitoring ve Logging
+
+### 8.1 Loglama
+
+#### Python Logging
+```python
+# app/utils/logger.py
+import logging
+import sys
+
+def setup_logger(name, level=logging.INFO):
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
+    
+    handler = logging.StreamHandler(sys.stdout)
+    formatter = logging.Formatter(
+        '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    )
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    
+    return logger
+```
+
+#### Uygulama Logları
+```python
+# app/api/v1/user_routes.py
+from app.utils.logger import setup_logger
+
+logger = setup_logger(__name__)
+
+@router.post("/register")
+async def register_user(user_data: UserCreate):
+    try:
+        logger.info(f"Yeni kullanıcı kaydı: {user_data.username}")
+        user = await user_service.register_user(user_data)
+        logger.info(f"Kullanıcı kaydı başarılı: {user.id}")
+        return user
+    except Exception as e:
+        logger.error(f"Kullanıcı kaydı hatası: {str(e)}")
+        raise HTTPException(status_code=400, detail=str(e))
+```
+
+### 8.2 Monitoring
+
+#### Prometheus Metrics
+```python
+# app/utils/metrics.py
+from prometheus_client import Counter, Histogram
+
+# Metrik tanımlamaları
+REQUEST_COUNT = Counter('app_requests_total', 'Total requests', ['method', 'endpoint'])
+REQUEST_DURATION = Histogram('app_request_duration_seconds', 'Request duration')
+
+# Middleware
+@app.middleware("http")
+async def metrics_middleware(request: Request, call_next):
+    start_time = time.time()
+    
+    response = await call_next(request)
+    
+    REQUEST_COUNT.labels(
+        method=request.method,
+        endpoint=request.url.path
+    ).inc()
+    
+    REQUEST_DURATION.observe(time.time() - start_time)
+    
+    return response
+```
+
+## 9. Güvenlik Önlemleri
+
+### 9.1 Kimlik Doğrulama
+
+#### JWT Implementation
+```python
+# app/core/security.py
+from datetime import datetime, timedelta
+from jose import jwt
+from passlib.context import CryptContext
+
+SECRET_KEY = "super-secret-key"
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def get_password_hash(password):
+    return pwd_context.hash(password)
+
+def create_access_token(data: dict):
+    to_encode = data.copy()
+    expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+```
+
+### 9.2 Input Validation
+
+#### Pydantic Schemas
+```python
+# app/schemas/user.py
+from pydantic import BaseModel, EmailStr, validator
+
+class UserCreate(BaseModel):
+    username: str
+    email: EmailStr
+    password: str
+    
+    @validator('username')
+    def username_alphanumeric(cls, v):
+        assert v.isalnum(), 'Kullanıcı adı sadece harf ve rakam içermelidir'
+        return v
+    
+    @validator('password')
+    def password_strength(cls, v):
+        if len(v) < 8:
+            raise ValueError('Şifre en az 8 karakter olmalıdır')
+        return v
+```
+
+## 10. Performans Optimizasyonu
+
+### 10.1 Caching
+
+#### Redis Cache
+```python
+# app/utils/cache.py
+import redis
+import json
+
+redis_client = redis.Redis(host='localhost', port=6379, db=0)
+
+def cache_get(key):
+    try:
+        value = redis_client.get(key)
+        return json.loads(value) if value else None
+    except:
+        return None
+
+def cache_set(key, value, expire=3600):
+    try:
+        redis_client.setex(key, expire, json.dumps(value))
+    except:
+        pass
+```
+
+#### Cache Decorator
+```python
+# app/utils/decorators.py
+from functools import wraps
+from app.utils.cache import cache_get, cache_set
+
+def cached(expire=3600):
+    def decorator(func):
+        @wraps(func)
+        async def wrapper(*args, **kwargs):
+            # Cache key oluştur
+            cache_key = f"{func.__name__}:{str(args)}:{str(kwargs)}"
+            
+            # Cache'den veri al
+            cached_result = cache_get(cache_key)
+            if cached_result is not None:
+                return cached_result
+            
+            # Fonksiyonu çalıştır
+            result = await func(*args, **kwargs)
+            
+            # Sonucu cache'e kaydet
+            cache_set(cache_key, result, expire)
+            
+            return result
+        return wrapper
+    return decorator
+```
+
+## 11. Kod Kalitesi ve Standartlar
+
+### 11.1 Kod Formatlama
+
+#### Black Formatter
+```ini
+# pyproject.toml
+[tool.black]
+line-length = 88
+target-version = ['py39']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # exclude a few common directories in the
+  # root of the project
+  \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+```
+
+#### Flake8 Linting
+```ini
+# .flake8
+[flake8]
+max-line-length = 88
+extend-ignore = E203, W503
+exclude = .git,__pycache__,venv
+```
+
+### 11.2 Type Hints
+
+```python
+# app/services/user_service.py
+from typing import Optional, Dict, Any
+from app.models.user import User
+from app.schemas.user import UserCreate
+
+class UserService:
+    async def register_user(self, user_data: UserCreate) -> User:
+        """Yeni kullanıcı kaydeder."""
+        # Implementation
+        pass
+    
+    async def get_user_by_id(self, user_id: int) -> Optional[User]:
+        """ID ile kullanıcıyı getirir."""
+        # Implementation
+        pass
+    
+    async def update_user_profile(
+        self, 
+        user_id: int, 
+        profile_data: Dict[str, Any]
+    ) -> User:
+        """Kullanıcı profilini günceller."""
+        # Implementation
+        pass
+```
+
+## 12. Dokümantasyon
+
+### 12.1 API Dokümantasyonu
+
+#### Swagger/OpenAPI
+```python
+# app/main.py
+from fastapi import FastAPI
+from fastapi.openapi.utils import get_openapi
+
+app = FastAPI(
+    title="Alex LGS Koçum API",
+    description="8. sınıf öğrencileri için yapay zeka destekli LGS hazırlık uygulaması API",
+    version="1.0.0"
+)
+
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+    openapi_schema = get_openapi(
+        title="Alex LGS Koçum API",
+        version="1.0.0",
+        description="8. sınıf öğrencileri için yapay zeka destekli LGS hazırlık uygulaması API",
+        routes=app.routes,
+    )
+    app.openapi_schema = openapi_schema
+    return app.openapi_schema
+
+app.openapi = custom_openapi
+```
+
+### 12.2 Teknik Dokümantasyon
+
+#### Sphinx Documentation
+```rst
+# docs/source/user_service.rst
+User Service
+============
+
+.. automodule:: app.services.user_service
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+UserService Class
+-----------------
+
+.. autoclass:: app.services.user_service.UserService
+   :members:
+   :undoc-members:
+   :show-inheritance:
+```
+
+## 13. Versiyon Kontrolü ve Branching Strategy
+
+### 13.1 Git Workflow
+
+#### Feature Branching
+```bash
+# Yeni özellik dalı oluşturma
+git checkout -b feature/user-profile-update
+
+# Değişiklikleri commit etme
+git add .
+git commit -m "feat: kullanıcı profil güncelleme özelliği eklendi"
+
+# Ana dala merge etme
+git checkout main
+git merge feature/user-profile-update
+git push origin main
+```
+
+#### Release Tagging
+```bash
+# Versiyon tag'leme
+git tag -a v1.2.0 -m "Version 1.2.0 - Hata analizi modülü eklendi"
+git push origin v1.2.0
+```
+
+## 14. Geliştirme Süreci
+
+### 14.1 Agile Methodology
+
+#### Sprint Planning
+1. Sprint hedeflerinin belirlenmesi
+2. User story'lerin sıralanması
+3. Görev tahminlemesi
+4. Günlük stand-up toplantıları
+
+#### Retrospective
+1. Önceki sprint değerlendirmesi
+2. Başarılar ve iyileştirme alanları
+3. Sonraki sprint için aksiyon maddeleri
+
+### 14.2 Code Review Process
+
+#### Pull Request Template
+```markdown
+## Açıklama
+Bu PR, kullanıcı profil güncelleme özelliğini ekler.
+
+## Değişiklikler
+- [x] Kullanıcı profil güncelleme API endpoint'i
+- [x] Profil veri doğrulama
+- [x] Unit testler
+- [x] API dokümantasyonu
+
+## Testler
+- [x] Unit testler geçti
+- [x] Integration testler geçti
+- [x] Manuel test yapıldı
+
+## Ekran Görüntüleri (varsa)
+
+## İlgili Issue
+Closes #123
+```
+
+## 15. Scaling ve Future Improvements
+
+### 15.1 Horizontal Scaling
+
+#### Load Balancing
+```yaml
+# docker-compose.loadbalancer.yml
+version: '3.8'
+
+services:
+  loadbalancer:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - backend1
+      - backend2
+
+  backend1:
+    build: ./backend
+    environment:
+      - INSTANCE_ID=1
+
+  backend2:
+    build: ./backend
+    environment:
+      - INSTANCE_ID=2
+```
+
+### 15.2 Microservices Architecture
+
+#### Service Decomposition
+1. User Service
+2. Content Service
+3. Test Service
+4. Analytics Service
+5. Notification Service
+
+#### Service Communication
+- REST API calls
+- Message queues (RabbitMQ/Kafka)
+- Event-driven architecture
+ 
+
+
+📘 TUNA LGS HAZIRLIK – 2025-2026 EĞİTİM YILI (SON REVİZE SÜRÜM)
+
+🎯 AMAÇ
+Tuna’nın 2025-2026 LGS sınavına en verimli şekilde hazırlanması, sınav stresinden uzak, eğlenceli ve oyunlaştırılmış bir öğrenme deneyimi sağlamak. 
+Hedef puan: 450-475 (Türkiye genelinde %2’lik dilim).
+
+👨‍🏫 ALEX – KOÇ + ÖĞRETMEN HİBRİT MODEL
+- Alex hem öğretmen hem mentor görevini üstlenir.
+- Öğretmen tarafı → Türkçe, Matematik, Fen, İngilizce derslerinde konu anlatır, soru çözdürür, yanlışları açıklar.
+- Koç/mentor tarafı → Tuna’yı motive eder, ilgi alanlarını derse bağlar, geleceğe dair yönlendirmeler yapar.
+- Çok dilli destek: Türkçe (öncelikli), İngilizce, Almanca, İspanyolca, İtalyanca.
+
+🧩 ÖĞRENME YÖNTEMİ
+- Yazma zorunluluğu yok, tamamen dokunmatik + sesli + animasyonlu etkileşim.
+- Tuna’nın hataları kaydedilir, tekrar eden hatalarda “mini özel ders” açılır.
+- Öğrenme süreci ezber değil, kavrayarak ve görselle desteklenir.
+- Anlamayı kolaylaştırmak için metafor, animasyon, futbol ve oyun örnekleri kullanılır.
+
+📚 MÜFREDAT (8. SINIF LGS KONULARI)
+(Tüm derslerin üniteleri eksiksiz şekilde eklenmiştir.)
+
+⚽ FENERBAHÇE ENTEGRASYONU
+- 2025-2026 Fenerbahçe fikstürü uygulamaya entegre edilir.
+- Görevleri tamamlayan Tuna → tam maç izleme ödülü, eksik olursa 30 dk sınırlı izin.
+
+🎮 OYUNLAŞTIRMA (GAMIFICATION)
+- Her doğru soru → puan kazanılır, puanlar ödül olarak kullanılır.
+- Haftalık hedef tamamlanınca → Serbest Oyun Saati açılır.
+
+🗓️ GÜNLÜK & HAFTALIK PLAN
+- Günlük: 2–3 saat, Pomodoro tekniği ile.
+- Haftalık rapor: çalışma süresi, başarı yüzdesi, en çok hata yapılan konular.
+- Gelecek dersi: haftada 15 dakika.
+
+🌍 MENTORLUK & GELECEK EĞİTİMİ
+- Python, yapay zekâ, oyun geliştirme, veri bilimi.
+
+📊 AİLE PANELİ & RAPORLAMA
+- Mobil + web paneli.
+- Haftalık rapor, sesli + yazılı.
+
+⚙️ TEKNİK ALTYAPI
+- Flutter + Firebase + AI Core (Hugging Face veya OpenAI free tier) + ElevenLabs veya eşdeğer ses.
+
+📊 3 FAZLI LGS STRATEJİSİ
+1. Faz: Temel konu öğrenme.
+2. Faz: Zorlayıcı yeni nesil sorular.
+3. Faz: Deneme sınavları.
+
+🔒 KURALLAR
+- Negatif dil yok, hata = öğrenme fırsatı.
+
+===========================================
+KISA ÖZET ÇERCEVE
+========================================
+ENGLISH PROMPT
+===========================================
+You are "Alex," a multi-lingual AI mentor designed for a 13-year-old Turkish student named Tuna, preparing for the 2025-2026 LGS exam.  
+- Act as both a teacher (for Math, Turkish reading comprehension, and Science) and a mentor (guidance, motivation, life skills).  
+- Tuna dislikes writing. Interactions must be voice-based, touch-based, emoji reactions, and drag-and-drop only.  
+- Motivation must be gamified: integrate his interests (Fenerbahçe football, Valorant, FIFA, computer games) into learning examples.  
+- Track mistakes, reinforce through spaced repetition, and provide adaptive mini-lessons when the same mistake repeats.  
+- Prepare personalized daily/weekly study schedules (Pomodoro + adaptive testing).  
+- Send weekly parent reports: time studied, success rates, weak points, progress.  
+- Each week, give a “15-Minute Future Lesson” about coding (Python), AI, game development, or future careers in a fun way.  
+- Always use encouraging, positive language. Mistakes are "learning opportunities."  
+- Speak as a friendly older brother and mentor, not a strict teacher.  
+
+===========================================
+4) NEGATIVE ENGLISH PROMPT
+===========================================
+- Do not use adult, stressful, or fear-based language.  
+- Do not compare Tuna with others or say he will “fail.”  
+- Do not give political, religious, or inappropriate advice.  
+- Do not provide violent, horror, or negative examples.  
+- Do not overload with text; keep it short, visual, and interactive.  
+- Do not allow open internet browsing for Tuna.  
+- Do not encourage unhealthy screen time or unrestricted gaming.  
+- Do not act like a strict authoritarian teacher.  

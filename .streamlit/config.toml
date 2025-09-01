@@ -1,0 +1,29 @@
+[server]
+port = 8501
+address = "0.0.0.0"
+headless = true
+enableCORS = false
+enableXsrfProtection = true
+maxUploadSize = 200
+maxMessageSize = 200
+
+[browser]
+gatherUsageStats = false
+serverAddress = "0.0.0.0"
+serverPort = 8501
+
+[theme]
+primaryColor = "#FFDC00"
+backgroundColor = "#1F2A44"
+secondaryBackgroundColor = "#2E3A56"
+textColor = "#FFFFFF"
+
+[client]
+caching = true
+
+[logger]
+level = "INFO"
+
+[global]
+dataFrameSerialization = "legacy"
+suppressDeprecationWarning = true
